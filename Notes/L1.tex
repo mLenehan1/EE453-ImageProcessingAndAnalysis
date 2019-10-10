@@ -1,0 +1,200 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[dutch]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+	\section{Baseline IPA Techniques}
+	\begin{itemize}
+		\item Image Representation
+		\item Point-by-Point Operators
+		\item Thresholding
+		\item Local Operators
+		\item Correlation, Convolution, Deconvolution
+		\item Adaptive Threshold
+		\item Non-Linear Local Operators
+	\end{itemize}
+	\section{Baseline Vision Techniques}
+	\subsection{Image in -> Image out}
+	\begin{itemize}
+		\item Image Acquisition
+		\begin{itemize}
+			\item 2D array of integers representing pixel brightness
+		\end{itemize}
+		\item Image representation
+		\item Image processing
+		\item Image analysis
+		\item Image interpretation
+	\end{itemize}
+	\section{Image Processing}
+	\begin{itemize}
+		\item Image to Image operation
+		\item Aim to produce images that will make the analysis stage simpler and more robust
+		\item Two main classes of operations applied to images during processing
+		\begin{itemize}
+			\item Point to point operations
+			\item Neighbourhood operations
+		\end{itemize}
+	\end{itemize}
+	\section{Image Analysis}
+	\subsection{Image in -> Features out}
+	\begin{itemize}
+		\item Automatic extraction of useful information from an image
+		\item Information extracted must be:
+		\begin{itemize}
+			\item Explicit
+			\item Useful in the subsequent decision making process
+		\end{itemize}
+	\item Common image analysis techniques:
+	\begin{itemize}
+		\item Template matching
+		\item Pattern recognition using feature extraction
+		\item Descriptive syntactic processes
+	\end{itemize}
+	\end{itemize}
+	\section{Pattern Recognition Using Feature Extraction}
+	\begin{itemize}
+		\item Images (objects described in terms of their representative features
+		\item Basic Steps:
+		\begin{itemize}
+			\item Segmentation (divide the image into its constituent parts)
+			\item Feature extraction
+			\item Classification
+		\end{itemize}
+	\end{itemize}
+	\section{Monochrome Image Representation}
+	\begin{itemize}
+		\item Binary Images
+		\item Colour images (R, G, B)
+		\item Multispectral (Visible, IR, UV)
+		\item Stereoscopy)
+		\item Image Sequences
+	\end{itemize}
+	Ability to analyse image depends on how the original scene is encoded
+	\section{Image Representation}
+	\begin{itemize}
+		\item Example intensity assignment scheme:
+	\end{itemize}
+	\[
+		f(i,j) = 0
+		0 < f(i,j) \le 0.33W
+		0.33W < f(i,j) \le 0.67W
+		0.67 < f(i,j) < W
+		f(i,j) = W
+	.\] 
+	\begin{itemize}
+		\item Binary image: Only two intensity levels: Black (0), White (1)
+	\end{itemize}
+	\section{Elementary Image Processing Notation}
+	\begin{itemize}
+		\item N(i,j) forms a 3x3 set of pixels (neighbourhood) around pixel (i,j)
+			\begin{itemize}
+				\item 8-neighbours of (i,j) (8-connected)
+			\end{itemize}
+	\end{itemize}
+	\[
+	{(i-1, j-1),((i-1,j),i-1,j+1),(i,j-1),(i,j+1),(i+1,j-1),(i+1,j),(i+1,j+1)}
+	.\] 
+	\begin{itemize}
+		\begin{itemize}
+			\item 4-neighbours of (i,j) (4-connected)
+		\end{itemize}
+	\end{itemize}
+	\[
+	{(i-1,j),(i,j-1),(i,j+1),(i+1,j)}
+	.\] 
+	\section{Monadic, Point-by-Point Operators}
+	\begin{itemize}
+		\item Intensity normalisation (indicated by and asterisk (*))
+		\begin{itemize}
+			\item Maintain c(i,j) within the same range as the input (0,W)
+			\item Permits iterative processing
+		\end{itemize}
+	\item Negate $c(i,j) \impliedby W-a(i,j)$
+	\item Squaring* $c(i,j) \impliedby [a(i,j)]^2/2$
+	\item Intensity Shift*
+	\item Intensity Multiply*
+	\item Highlight
+	\item flow(num) traps overflow and underflow situations on an integer variable num
+	\begin{itemize}
+		\item if (num>WHITE) return (WHITE)
+		\item if (num<BLACK) return (BLACK)
+	\end{itemize}
+	\end{itemize}
+	\section{Threshold}
+	\begin{itemize}
+		\item Generally try to segment image regions by identifying common properties
+		\item Simplest property is intensity -> thresholding
+		\item Binary images from grey level images
+		\item Problems:
+		\begin{itemize}
+			\item Only consider intensity - not include relationship between pixels
+			\item Cannot be sure that the thresholded regions are in contact
+			\item Can include or miss unwanted/necessary regions
+			\item Very hard (or impossible) to find a satisfactory threshold value (easy to under/over threshold - noise increases this efect)
+			\item Illumination may be uneven across the image
+		\end{itemize}
+		\item Mid-Level Threshold:
+		\begin{itemize}
+			\item Threshold midway between the minimum and maximum grey level (i.e. at the grey scale value MIDGREY
+		\end{itemize}
+		\item Global: Dependent on the grey level of a given point
+		\item Adaptive/Local: Dependent on the grey levels of the neighbouring points also
+		\item Dynamic: Local + Dependent on the point's co-ordinates. Can be used to deal with uneven illumination.
+	\end{itemize}
+	Examine the histogram (probability distribution) to see if can get two or more distinct modes to allow separation between foreground and background.
+	\[Probability of grey level(g): [p(g) = \frac{N_g}{N}].\]
+	\[N = total number pixels, N_g = number of pixels with a grey level g.\]
+	\section{Automated Thresholds - Peaks and Valleys}
+	Simple approach - find local minima (valley) between local maxima (peaks) in the histogram.
+	\begin{itemize}
+		\item Problems:
+		\begin{itemize}
+			\item Noise - Multiple local maxima/minima - can be overcome by smoothing the histogram
+		\end{itemize}
+	\end{itemize}
+	\section{Automated Thresholds - Clustering}
+	\begin{itemize}
+		\item View as a clustering problem - problem is that the range of values may overlap
+		\item Want to minimise the error in classiication (e.g. misclassifying a foreground pixel as a background one)
+		\item Otsu method: Simple idea, find the threshold that:
+		\begin{itemize}
+			\item minimizes the weighted intra (within) class variance
+			\item = maximizing the inter (between) class variance
+		\end{itemize}
+		\item Based solely on intensity information - No spatial context
+		\item Set the threshold so each cluster is as tight as possible with a view to minimizing any overlap
+		\begin{itemize}
+			\item Cannot change the distributions so we adjust where we separate them (threshold)
+			\item As we adjust the threshold one way we increase the spread of one and decrease the spread of the other - Goal: to select threshold that minimizes the combined sprea
+			\item May fail when object and background pixels are extremely unbalanced
+		\end{itemize}
+		\item For foreground object (f) and background (b)
+		\item weights (W) and mean $(\mu)$
+		\item variance $(\sigma^2 - average squared deviation of each value from its mean)$
+		\begin{itemize}
+			\item Within class variance
+			\item $\sigma_W^2 = W_b\sigma_b^2 + W_f\sigma_f^2$
+			\item Between class variance
+			\item $\sigma_B^2 = \sigma^2 - \sigma_W^2$
+			\item  $= W_bW_f(\mu_b - \mu_f)^2$
+		\end{itemize}
+	\end{itemize}
+\end{document}
