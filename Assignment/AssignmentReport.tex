@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[dutch]{babel}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{./figures/}{#1.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\begin{document}
+	\section{Part 1: Thresholding}
+	\subsection{Introduction}
+	\subsection{Techniques}
+	\subsection{Pseudocode}
+	\subsubsection{Part a}
+	\subsubsection{Part b}
+	\subsubsection{Part c}
+	\subsection{Results}
+	\subsection{Conclusion}
+	\section{Part 2: Segmentation}
+	\subsection{Introduction}
+	\subsection{Techniques}
+	\subsection{Pseudocode}
+	\subsubsection{Part a}
+	\subsubsection{Part b}
+	\subsection{Results}
+	\subsection{Conclusion}
+	\section{Part 3: Convolution}
+	\subsection{Introduction}
+	\subsection{Techniques}
+	\subsection{Pseudocode}
+	\subsection{Results}
+	\subsubsection{Part a}
+	\subsubsection{Part b}
+	\subsubsection{Part c}
+	\subsection{Conclusion}
+	\section{Appendix}
+\end{document}
