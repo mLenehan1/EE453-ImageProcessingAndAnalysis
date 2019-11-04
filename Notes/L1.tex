@@ -98,7 +98,7 @@
 		0.33W < f(i,j) \le 0.67W
 		0.67 < f(i,j) < W
 		f(i,j) = W
-	.\] 
+	.\]
 	\begin{itemize}
 		\item Binary image: Only two intensity levels: Black (0), White (1)
 	\end{itemize}
@@ -111,7 +111,7 @@
 	\end{itemize}
 	\[
 	{(i-1, j-1),((i-1,j),i-1,j+1),(i,j-1),(i,j+1),(i+1,j-1),(i+1,j),(i+1,j+1)}
-	.\] 
+	.\]
 	\begin{itemize}
 		\begin{itemize}
 			\item 4-neighbours of (i,j) (4-connected)
@@ -119,7 +119,7 @@
 	\end{itemize}
 	\[
 	{(i-1,j),(i,j-1),(i,j+1),(i+1,j)}
-	.\] 
+	.\]
 	\section{Monadic, Point-by-Point Operators}
 	\begin{itemize}
 		\item Intensity normalisation (indicated by and asterisk (*))
@@ -197,4 +197,61 @@
 			\item  $= W_bW_f(\mu_b - \mu_f)^2$
 		\end{itemize}
 	\end{itemize}
+	\subsection{Basic Approach (minimize within class variance}
+	\subsection{Faster Approach (maximize between class variance}
+	\[
+		\text{Between Class Variance} \sigma_B^2 = \sigma^2-\sigma_W^2
+	.\]
+	\[
+		= W_bW_f(\mu_b-\mu_f)^2
+	.\]
+	Algorithm (Between class variance)
+	\begin{itemize}
+		\item Compute histogram and probabilities of each intensity
+			level
+		\item Set up initial $W_i(0)$ and $\mu_i(0)$ vals
+		\item For each potential thresh
+		\begin{itemize}
+			\item Separate px into 2 clusters according to thresh
+			\item Find mean of each cluster
+			\item Square difference between the means
+			\item Multiply bu no. of px in each cluster
+		\end{itemize}
+		\item Desired thresh corresponds to max. $\sigma_B^2$
+	\end{itemize}
+	\section{Dyadic, Point-by-Point Operators}
+	\begin{itemize}
+		\item Add* $c(i,j) <- [a(i,j)+b(i,j)]/2$
+		\item Subtract* $c(i,j) <- flow(a(i,j)-b(i,j))$
+		\item We can also use:
+		\begin{itemize}
+			\item $c(i,j) <- max(a(i,j)-b(i,j),0)$
+			\item $c(i,j) <- [(a(i,j)-b(i,j))+W]/2$
+		\end{itemize}
+	\item Multiply* $c(i,j) <- [a(i,j).b(i,j)]/W$
+        \item Divide* $c(i,j) <- [a(i,j).W]/b(i,j)$
+	\item Max. $c(i,j) <- MAX[a(i,j),b(i,j)]$ Binary OR
+	\item Min. $c(i,j) <- MIN[a(i,j),b(i,j)]$ Binary AND
+	\end{itemize}
+	\section{Local Operators}
+	\[
+		c(i,j) <- g[a(i-1,j-1),a(i-1,j),a(i-1,j+1),a(i,j-1),a(i,j),
+	.\]
+	\[
+		a(i,j+1),a(i+1,j-1),a(i+1,j),a(i+1,j+1)
+	.\]
+	\section{Convolution and Correlation (Discrete)}
+	Correlation: meas. of similarity between two signals/sequences
+	\[
+		g(x,y)=w(x,y)f(x,y)=\sum_{s=-a}^{a} \sum_{t=-b}^{b}
+		w(s,t)f(x+s,y+t)
+	.\]
+	Convolution(*): meas/. of effect of one signal on the other signal
+	\[
+		g(x,y)=w(x,y)*f(x,y)=\sum_{s=-a}^{a} \sum_{t=-b}^{b}
+		w(s,t)f(x-s,y-t)
+	.\]
+	Convolution is correlation with filter/kernel rotated 180degrees (flip
+	filter both horizontally and vertically)
+
 \end{document}

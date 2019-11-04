@@ -3,8 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[dutch]{babel}
+\usepackage[UKenglish]{babel}
 \usepackage{amsmath, amssymb}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
 
 
 % figure support
@@ -23,11 +26,65 @@
 \begin{document}
 	\section{Part 1: Thresholding}
 	\subsection{Introduction}
+	Thresholding is a technique used to segment an image based on grey level
+	intensities within the image. Two common methods of thresholding an
+	image are applying a "Fixed Global Threshold" and applying an "Adaptive
+	Threshold". Each of these methods take a greyscale input image, and
+	output a binary (black and white) image.
 	\subsection{Techniques}
+	\par Fixed Global thresholding involves applying a single threshold value
+	across the image, i.e. if the intensity value of the pixel is greater
+	than the threshold value, set that pixel to white, otherwise, set it to
+	black.
+	\par Adaptive thresholding techniques base their threshold values at the
+	current pixel off the neighbouring pixels. The "5x5 Adaptive
+	Thresholding" method utilised in this section takes the mean intensity
+	value of the 24 pixels surrounding the currently selected pixel as the
+	threshold value for the currently selected pixel. If this center pixels
+	intensity value is greater than the threshold, it's value is set to
+	white, otherwise it is set to black.
 	\subsection{Pseudocode}
 	\subsubsection{Part a}
+	\begin{enumerate}
+		\item Load the image into Matlab using the ``imread()''
+			function
+		\item Use the ``rgb2gray()'' function to convert the image to
+			greyscale.
+		\item Display the greyscale image using the ``imshow()''
+			function.
+	\end{enumerate}
 	\subsubsection{Part b}
+	\begin{enumerate}
+		\item Follow the steps of Part a.
+		\item Apply a fixed global threshold using the VSG package
+			'Threshold' function. An arbitrary value should be
+			chosen for the fixed threshold value.
+		\item Vary the fixed threshold value in order to obtain optimal
+			background/foreground segmentation, while retaining
+			facial features.
+		\item Display the thresholded images using the ``imshow()''
+			function.
+	\end{enumerate}
 	\subsubsection{Part c}
+	\begin{enumerate}
+		\item Follow the steps of Part a.
+		\item Apply a 5x5 adaptive threshold using the VSG package
+			"5x5Thresh" function.
+		\item Display the adaptive thresholded image using the
+			``imshow()'' function.
+	\end{enumerate}
+	\subsubsection{Part d}
+	\begin{enumerate}
+		\item Follow the steps of Part a.
+		\item Apply Gaussian noise to the greyscale image using the MIP
+			``imnoise()'' function. Zero-mean noise should be used
+			for this section.
+		\item Execute the fixed global thresholding and 5x5 adaptive
+			thresholding procedures as described in part b and part
+			c respectively.
+		\item Adjust the variance value of the ``imnoise()'' function.
+			Repeat steps 2 and 3.
+	\end{enumerate}
 	\subsection{Results}
 	\subsection{Conclusion}
 	\section{Part 2: Segmentation}
