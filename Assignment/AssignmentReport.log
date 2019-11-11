@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.2)  29 OCT 2019 09:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.2)  11 NOV 2019 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -264,21 +264,74 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+\captionmargin=\dimen113
+\captionmargin@=\dimen114
+\captionwidth=\dimen115
+\caption@tempdima=\dimen116
+\caption@indent=\dimen117
+\caption@parindent=\dimen118
+\caption@hangindent=\dimen119
+)
+\c@caption@flags=\count102
+\c@ContinuedFloat=\count103
+)
+\c@subfigure=\count104
+\c@subtable=\count105
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count106
+\lst@gtempboxa=\box29
+\lst@token=\toks22
+\lst@length=\count107
+\lst@currlwidth=\dimen120
+\lst@column=\count108
+\lst@pos=\count109
+\lst@lostspace=\dimen121
+\lst@width=\dimen122
+\lst@newlines=\count110
+\lst@lineno=\count111
+\lst@maxwidth=\dimen123
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count112
+\lst@skipnumbers=\count113
+\lst@framebox=\box30
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count114
+\float@exts=\toks23
+\float@box=\box31
+\@float@everytoks=\toks24
+\@floatcapt=\box32
+) (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
 ) (/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count102
-\calc@Bcount=\count103
-\calc@Adimen=\dimen113
-\calc@Bdimen=\dimen114
+\calc@Acount=\count115
+\calc@Bcount=\count116
+\calc@Adimen=\dimen124
+\calc@Bdimen=\dimen125
 \calc@Askip=\skip46
 \calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count104
+\calc@Ccount=\count117
 \calc@Cskip=\skip48
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -296,10 +349,7 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
-) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -323,63 +373,115 @@ Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen115
-\Gin@req@width=\dimen116
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
 )
-\AM@pagewidth=\dimen117
-\AM@pageheight=\dimen118
+\AM@pagewidth=\dimen128
+\AM@pageheight=\dimen129
  (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box29
-\AM@global@opts=\toks22
-\AM@toc@title=\toks23
-\c@AM@survey=\count105
-\AM@templatesizebox=\box30
+\AM@pagebox=\box33
+\AM@global@opts=\toks25
+\AM@toc@title=\toks26
+\c@AM@survey=\count118
+\AM@templatesizebox=\box34
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/transparent.sty
 Package: transparent 2018/11/18 v1.3 Transparency via pdfTeX's color stack (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-)) (./AssignmentReport.aux)
+)) (./AssignmentReport.aux
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+)
 \openout1 = `AssignmentReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 26.
-\AtBeginShipoutBox=\box31
+LaTeX Font Info:    ... okay on input line 29.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count119
+\AtBeginShipoutBox=\box35
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen119
-\scratchbox=\box32
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen120
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count120
+\scratchdimen=\dimen130
+\scratchbox=\box36
+\nofMPsegments=\count121
+\nofMParguments=\count122
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count123
+\MPscratchDim=\dimen131
+\MPnumerator=\count124
+\makeMPintoPDFobject=\count125
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -417,29 +519,430 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
  (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
-Overfull \hbox (24.61032pt too wide) in paragraph at lines 62--65
-[]\T1/cmr/m/n/10 Vary the fixed threshold value in or-der to ob-tain op-timal back-ground/foreground
- []
-
-[1
+LaTeX Font Info:    Try loading font information for U+msa on input line 52.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 52.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \vbox (9.41956pt too high) has occurred while \output is active []
+<Results/Q1/a/qaInput.jpg, id=16, 875.27pt x 948.54375pt>
+File: Results/Q1/a/qaInput.jpg Graphic file (type jpg)
+<use Results/Q1/a/qaInput.jpg>
+Package pdftex.def Info: Results/Q1/a/qaInput.jpg  used on input line 142.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
 
- [3] (./AssignmentReport.aux) ) 
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 142--142
+ [][] 
+ []
+
+<Results/Q1/a/qaGreyscale.jpg, id=17, 875.27pt x 948.54375pt>
+File: Results/Q1/a/qaGreyscale.jpg Graphic file (type jpg)
+<use Results/Q1/a/qaGreyscale.jpg>
+Package pdftex.def Info: Results/Q1/a/qaGreyscale.jpg  used on input line 144.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 144--144
+ [][] 
+ []
+
+[3]
+<Results/Q1/b/qbThreshData.jpg, id=21, 875.27pt x 948.54375pt>
+File: Results/Q1/b/qbThreshData.jpg Graphic file (type jpg)
+<use Results/Q1/b/qbThreshData.jpg>
+Package pdftex.def Info: Results/Q1/b/qbThreshData.jpg  used on input line 161.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 161--161
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+[]\T1/cmr/m/n/9 (a) |Data Driven
+ []
+
+<Results/Q1/b/qbThresh125.jpg, id=22, 875.27pt x 948.54375pt>
+File: Results/Q1/b/qbThresh125.jpg Graphic file (type jpg)
+<use Results/Q1/b/qbThresh125.jpg>
+Package pdftex.def Info: Results/Q1/b/qbThresh125.jpg  used on input line 163.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 163--163
+ [][] 
+ []
+
+<Results/Q1/b/qbThresh130.jpg, id=23, 875.27pt x 948.54375pt>
+File: Results/Q1/b/qbThresh130.jpg Graphic file (type jpg)
+<use Results/Q1/b/qbThresh130.jpg>
+Package pdftex.def Info: Results/Q1/b/qbThresh130.jpg  used on input line 170.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 170--170
+ [][] 
+ []
+
+<Results/Q1/b/qbThresh140.jpg, id=24, 875.27pt x 948.54375pt>
+File: Results/Q1/b/qbThresh140.jpg Graphic file (type jpg)
+<use Results/Q1/b/qbThresh140.jpg>
+Package pdftex.def Info: Results/Q1/b/qbThresh140.jpg  used on input line 172.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 172--172
+ [][] 
+ []
+
+[4 <./Results/Q1/a/qaInput.jpg> <./Results/Q1/a/qaGreyscale.jpg> <./Results/Q1/b/qbThreshData.jpg> <./Results/Q1/b/qbThresh125.jpg>]
+<Results/Q1/c/qcThresh5x5.jpg, id=30, 875.27pt x 948.54375pt>
+File: Results/Q1/c/qcThresh5x5.jpg Graphic file (type jpg)
+<use Results/Q1/c/qcThresh5x5.jpg>
+Package pdftex.def Info: Results/Q1/c/qcThresh5x5.jpg  used on input line 186.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+<Results/Q1/d/qdVar00001.jpg, id=31, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdVar00001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdVar00001.jpg>
+Package pdftex.def Info: Results/Q1/d/qdVar00001.jpg  used on input line 201.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 201--201
+ [][] 
+ []
+
+<Results/Q1/d/qdThresh00001.jpg, id=32, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdThresh00001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdThresh00001.jpg>
+Package pdftex.def Info: Results/Q1/d/qdThresh00001.jpg  used on input line 203.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 203--203
+ [][] 
+ []
+
+<Results/Q1/d/qd5x500001.jpg, id=33, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qd5x500001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qd5x500001.jpg>
+Package pdftex.def Info: Results/Q1/d/qd5x500001.jpg  used on input line 205.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 205--205
+ [][] 
+ []
+
+
+Overfull \hbox (17.34207pt too wide) in paragraph at lines 191--209
+\T1/cmr/m/n/10 Gaussian noise is ad-ded to the grey-scale im-age, and the ``Threshold'' and ``5x5Thresh''
+ []
+
+[5 <./Results/Q1/b/qbThresh130.jpg> <./Results/Q1/b/qbThresh140.jpg> <./Results/Q1/c/qcThresh5x5.jpg>]
+<Results/Q1/d/qdVar0001.jpg, id=37, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdVar0001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdVar0001.jpg>
+Package pdftex.def Info: Results/Q1/d/qdVar0001.jpg  used on input line 213.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 213--213
+ [][] 
+ []
+
+<Results/Q1/d/qdThresh0001.jpg, id=38, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdThresh0001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdThresh0001.jpg>
+Package pdftex.def Info: Results/Q1/d/qdThresh0001.jpg  used on input line 215.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 215--215
+ [][] 
+ []
+
+<Results/Q1/d/qd5x50001.jpg, id=39, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qd5x50001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qd5x50001.jpg>
+Package pdftex.def Info: Results/Q1/d/qd5x50001.jpg  used on input line 217.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 217--217
+ [][] 
+ []
+
+<Results/Q1/d/qdVar001.jpg, id=40, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdVar001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdVar001.jpg>
+Package pdftex.def Info: Results/Q1/d/qdVar001.jpg  used on input line 224.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 224--224
+ [][] 
+ []
+
+<Results/Q1/d/qdThresh001.jpg, id=41, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdThresh001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdThresh001.jpg>
+Package pdftex.def Info: Results/Q1/d/qdThresh001.jpg  used on input line 226.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 226--226
+ [][] 
+ []
+
+<Results/Q1/d/qd5x5001.jpg, id=42, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qd5x5001.jpg Graphic file (type jpg)
+<use Results/Q1/d/qd5x5001.jpg>
+Package pdftex.def Info: Results/Q1/d/qd5x5001.jpg  used on input line 228.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 228--228
+ [][] 
+ []
+
+<Results/Q1/d/qdVar01.jpg, id=43, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdVar01.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdVar01.jpg>
+Package pdftex.def Info: Results/Q1/d/qdVar01.jpg  used on input line 235.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 235--235
+ [][] 
+ []
+
+<Results/Q1/d/qdThresh01.jpg, id=44, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdThresh01.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdThresh01.jpg>
+Package pdftex.def Info: Results/Q1/d/qdThresh01.jpg  used on input line 237.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 237--237
+ [][] 
+ []
+
+<Results/Q1/d/qd5x501.jpg, id=45, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qd5x501.jpg Graphic file (type jpg)
+<use Results/Q1/d/qd5x501.jpg>
+Package pdftex.def Info: Results/Q1/d/qd5x501.jpg  used on input line 239.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 239--239
+ [][] 
+ []
+
+[6 <./Results/Q1/d/qdVar00001.jpg> <./Results/Q1/d/qdThresh00001.jpg> <./Results/Q1/d/qd5x500001.jpg> <./Results/Q1/d/qdVar0001.jpg> <./Results/Q1/d/qdThresh0001.jpg> <./Results/Q1/d/qd5x50001.jpg>]
+<Results/Q1/d/qdVar1.jpg, id=49, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdVar1.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdVar1.jpg>
+Package pdftex.def Info: Results/Q1/d/qdVar1.jpg  used on input line 246.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 246--246
+ [][] 
+ []
+
+<Results/Q1/d/qdThresh1.jpg, id=50, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qdThresh1.jpg Graphic file (type jpg)
+<use Results/Q1/d/qdThresh1.jpg>
+Package pdftex.def Info: Results/Q1/d/qdThresh1.jpg  used on input line 248.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 248--248
+ [][] 
+ []
+
+<Results/Q1/d/qd5x51.jpg, id=51, 875.27pt x 948.54375pt>
+File: Results/Q1/d/qd5x51.jpg Graphic file (type jpg)
+<use Results/Q1/d/qd5x51.jpg>
+Package pdftex.def Info: Results/Q1/d/qd5x51.jpg  used on input line 250.
+(pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
+
+Overfull \hbox (27.77042pt too wide) in paragraph at lines 250--250
+ [][] 
+ []
+
+[7 <./Results/Q1/d/qdVar001.jpg> <./Results/Q1/d/qdThresh001.jpg> <./Results/Q1/d/qd5x5001.jpg> <./Results/Q1/d/qdVar01.jpg> <./Results/Q1/d/qdThresh01.jpg> <./Results/Q1/d/qd5x501.jpg> <./Results/Q1/d/qdVar1.jpg> <./Results/Q1/d/qdThresh1.jpg> <./Results/Q1/d/qd5x51.jpg>] [8] [9]
+<Results/Q2/NumPlate1/qanumber_plate_1.jpg, id=62, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1.jpg  used on input line 370.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 370--370
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Grey.jpg, id=63, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Grey.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Grey.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Grey.jpg  used on input line 372.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 372--372
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Low.jpg, id=64, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Low.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Low.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Low.jpg  used on input line 374.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 374--374
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg, id=65, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg  used on input line 385.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 385--385
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Not.jpg, id=66, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Not.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Not.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Not.jpg  used on input line 387.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 387--387
+ [][] 
+ []
+
+[10 <./Results/Q2/NumPlate1/qanumber_plate_1.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Grey.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Low.jpg>]
+<Results/Q2/NumPlate1/qanumber_plate_1Border.jpg, id=70, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Border.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Border.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Border.jpg  used on input line 394.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 394--394
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg, id=71, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg  used on input line 396.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 396--396
+ [][] 
+ []
+
+
+Underfull \hbox (badness 7273) in paragraph at lines 396--396
+[]\T1/cmr/m/n/9 (b) |Biggest Blob Re-
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg, id=72, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg  used on input line 408.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 408--408
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg, id=73, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg  used on input line 410.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 410--410
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg, id=74, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg  used on input line 417.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 417--417
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg, id=75, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg  used on input line 419.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 419--419
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg, id=76, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg  used on input line 421.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 421--421
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg, id=77, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg  used on input line 428.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 428--428
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg, id=78, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg  used on input line 430.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 430--430
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg, id=79, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg  used on input line 432.
+(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
+
+Overfull \hbox (2.3431pt too wide) in paragraph at lines 432--432
+ [][] 
+ []
+
+<Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg, id=80, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg  used on input line 439.
+(pdftex.def)             Requested size: 132.31456pt x 35.56593pt.
+<Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg, id=81, 2457.18pt x 660.4675pt>
+File: Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg Graphic file (type jpg)
+<use Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg>
+Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg  used on input line 441.
+(pdftex.def)             Requested size: 132.31456pt x 35.56593pt.
+[11 <./Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Not.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Border.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg>] [12 <./Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg>] [13] (./AssignmentReport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4976 strings out of 492615
- 67525 string characters out of 6131390
- 144521 words of memory out of 5000000
- 8785 multiletter control sequences out of 15000+600000
- 8262 words of font info for 20 fonts, out of 8000000 for 9000
+ 8009 strings out of 492615
+ 117358 string characters out of 6131390
+ 184088 words of memory out of 5000000
+ 11728 multiletter control sequences out of 15000+600000
+ 13828 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,39p,283b,198s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AssignmentReport.pdf (3 pages, 66217 bytes).
+ 42i,9n,46p,295b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AssignmentReport.pdf (13 pages, 5456189 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
