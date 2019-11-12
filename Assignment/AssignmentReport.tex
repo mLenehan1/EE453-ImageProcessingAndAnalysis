@@ -12,7 +12,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
-
+\lstset{breaklines=true}
 % figure support
 \usepackage{import}
 \usepackage{xifthen}
@@ -139,9 +139,9 @@
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Input Image}
-		[.3\linewidth]{\includegraphics[height=5cm]{Results/Q1/a/qaInput.jpg}}%
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q1/a/qaInput.jpg}}%
 		\subcaptionbox{Greyscale Image}
-		[.3\linewidth]{\includegraphics[height=5cm]{Results/Q1/a/qaGreyscale.jpg}}%
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q1/a/qaGreyscale.jpg}}%
 		\caption{Input and Greyscale Images}
 		\label{fig:}
 	\end{figure}
@@ -158,18 +158,18 @@
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Data Driven Threshold}
-		[.3\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThreshData.jpg}}%
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThreshData.jpg}}%
 		\subcaptionbox{Threshold$=125$}
-		[.3\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThresh125.jpg}}%
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThresh125.jpg}}%
 		\caption{``Threshold'' Function Output}
 		\label{fig:}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Threshold$=130$}
-		[.3\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThresh130.jpg}}%
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThresh130.jpg}}%
 		\subcaptionbox{Threshold$=140$}
-		[.3\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThresh140.jpg}}%
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q1/b/qbThresh140.jpg}}%
 		\caption{``Threshold'' Function Output}
 		\label{fig:}
 	\end{figure}
@@ -382,18 +382,18 @@
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Mid Threshold}
-		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg}}%
 		\subcaptionbox{Inverted (Not)}
-		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate1/qanumber_plate_1Not.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Not.jpg}}%
 		\caption{Preparing for Border Removal}
 		\label{fig:}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Biggest Blob}
-		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate1/qanumber_plate_1Border.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Border.jpg}}%
 		\subcaptionbox{Biggest Blob Removed}
-		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg}}%
 		\caption{Removed Outer Border}
 		\label{fig:}
 	\end{figure}
@@ -405,9 +405,9 @@
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Largest Character}
-		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg}}%
 		\subcaptionbox{Remaining Characters}
-		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg}}%
 		\caption{Removed Largest Alphanumeric Character}
 		\label{fig:}
 	\end{figure}
@@ -436,9 +436,9 @@
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Canny Edge Detection}
-		[.4\linewidth]{\includegraphics[height=1.25cm]{Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg}}%
 		\subcaptionbox{Overlayed Images}
-		[.4\linewidth]{\includegraphics[height=1.25cm]{Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg}}%
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg}}%
 		\caption{Overlayed Extracted Characters}
 		\label{fig:}
 	\end{figure}
@@ -463,19 +463,961 @@
 			function.
 		\item Use the ``rgb2gray()'' function to convert the image to
 			greyscale.
+		\item Use the VSG ``Rotate'' function to obtain a $180^\circ$ rotated
+			copy of the template.
+		\item Apply convolution on the greyscale input image, using the
+			greyscale template image, using the VSG ``Convolution''
+			funciton.
+		\item Apply convolution on the greyscale input image, using the
+			rotated greyscale template image, using the VSG
+			``Convolution'' funciton.
+		\item Add the resulting images from the convolution functions.
+		\item Apply a data driven global threshold to the image using
+			the ``Threshold'' function of the VSG toolbox.
+		\item Apply the VSG ``Centroid'' function to the thresholded
+			image to attain a point at the center of each blob.
+		\item Use the ``Point2Square'' function of the VSG toolbox to
+			turn each centroid point to a square, for ease of
+			viewing in the overlayed display.
+		\item Overlay the squares on the original image by adding the
+			``Point2Square'' resulting image to the original input
+			image, using the VSG ``Add'' function.
+	\end{enumerate}
+	\subsubsection{Part b}
+	\begin{enumerate}
+		\item Repeat the steps described in Part a.
+		\item After the input image has been converted to greyscale, use
+			the ``MaskImg'' function to cover any parts of the image
+			in contact with the edge.
+		\item After the ``Centroid'' function is executed, add a call to
+			the ``WPCounter'' function, to count the white pixels,
+			thus giving the number of template matches within the
+			image.
+	\end{enumerate}
+	\subsubsection{Part c}
+	\begin{enumerate}
+		\item Follow the steps in Part a.
+		\item Apply Gaussian noise to the greyscale input image using
+			the ``imnoise()'' function.
+		\item Adjust the variance of the ``imnoise()'' function until
+			the count of template matches is no longer correct.
 	\end{enumerate}
 	\subsection{Results}
 	\subsubsection{Part a}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input Image}
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q3/a/qaInput.jpg}}%
+		\subcaptionbox{Input Greyscale Image}
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q3/a/qaInputGrey.jpg}}%
+		\caption{Input image and Greyscale Conversion}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Template Image}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaTemplate.jpg}}%
+		\subcaptionbox{Greyscale Template}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaTemplateGrey.jpg}}%
+		\subcaptionbox{Template Rotated}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaTemplateGreyRot.jpg}}%
+		\caption{Required Template for Convolution}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Convolution (OT)}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv.jpg}}%
+		\subcaptionbox{Convolution (RT)}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv2.jpg}}%
+		\subcaptionbox{Convolution (+)}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaAddedConv.jpg}}%
+		\caption{Convolution outputs: Original Template(OT), Rotated
+		Template(RT), Added Results(+)}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Threshold}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThresh.jpg}}%
+		\subcaptionbox{Centroid}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaCentroid.jpg}}%
+		\subcaptionbox{Point2Square}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaP2S.jpg}}%
+		\caption{Outputs from the ``Threshold'', ``Centroid'', and
+		``Point2Square'' Functions, showing the locations of templte
+	matches}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q3/a/qaOverlay.jpg}%
+		\caption{Overlay showing Location of Pattern Matches}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaInputRot30.jpg}}%
+		\subcaptionbox{Input $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaInputRot45.jpg}}%
+		\subcaptionbox{Input $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaInputRot60.jpg}}%
+		\caption{Input Image Rotated $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Convolution1 $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv1-30.jpg}}%
+		\subcaptionbox{Convolution1 $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv1-45.jpg}}%
+		\subcaptionbox{Convolution1 $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv1-60.jpg}}%
+		\caption{Convolution with Template: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Convolution2 $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv2-30.jpg}}%
+		\subcaptionbox{Convolution2 $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv2-45.jpg}}%
+		\subcaptionbox{Convolution2 $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaConv2-60.jpg}}%
+		\caption{Convolution with Rotated Template: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Added Convolution $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaAddedConv30.jpg}}%
+		\subcaptionbox{Added Convolution $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaAddedConv45.jpg}}%
+		\subcaptionbox{Added Convolution $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaAddedConv60.jpg}}%
+		\caption{Added Convolution Results: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Threshold $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThresh30.jpg}}%
+		\subcaptionbox{Threshold $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThresh45.jpg}}%
+		\subcaptionbox{Threshold $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThresh60.jpg}}%
+		\caption{Threshold: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Centroid $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaCentroid30.jpg}}%
+		\subcaptionbox{Centroid $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaCentroid45.jpg}}%
+		\subcaptionbox{Centroid $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaCentroid60.jpg}}%
+		\caption{Centroid: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Point2Square $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaP2S30.jpg}}%
+		\subcaptionbox{Point2Square $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaP2S45.jpg}}%
+		\subcaptionbox{Point2Square $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaP2S60.jpg}}%
+		\caption{Point2Square: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Overlay $30^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaOverlay30.jpg}}%
+		\subcaptionbox{Overlay $45^\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaOverlay45.jpg}}%
+		\subcaptionbox{Overlay $60\circ$}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaOverlay60.jpg}}%
+		\caption{Overlay: $30^\circ, 45^\circ$ \& $60^\circ$}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Threshold Value 32}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThreshVal32.jpg}}%
+		\subcaptionbox{Threshold Value 50}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThreshVal50.jpg}}%
+		\subcaptionbox{Threshold Value 60}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/a/qaThreshVal60.jpg}}%
+		\caption{Convolution Thresholded at Values: 32, 50, \& 60}
+		\label{fig:}
+	\end{figure}
 	\subsubsection{Part b}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Dilated Image}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/b/qbDilation.jpg}}%
+		\subcaptionbox{Convolution}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/b/qbConvolution.jpg}}%
+		\subcaptionbox{Threshold}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/b/qbThreshold.jpg}}%
+		\caption{Dilation, Convolution and Thresholding Applied to Input
+		Image}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Centroid}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/b/qbCentroid.jpg}}%
+		\subcaptionbox{Point2Square}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/b/qbP2S.jpg}}%
+		\subcaptionbox{Overlay}
+		[.3\linewidth]{\includegraphics[height=3cm]{Results/Q3/b/qbOverlay.jpg}}%
+		\caption{Overlay of Template Match on Original Input Image}
+		\label{fig:}
+	\end{figure}
 	\subsubsection{Part c}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Noise Variance at 0.01}
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q3/c/qcOverlay001.jpg}}%
+		\subcaptionbox{Noise Variance at 0.1}
+		[.5\linewidth]{\includegraphics[height=5cm]{Results/Q3/c/qcOverlay01.jpg}}%
+		\caption{Overlay showing correct template matching at 0.01
+		variance, and incorrect matching at 0.1 variance.}
+		\label{fig:}
+	\end{figure}
 	\subsection{Conclusion}
 	\section{Appendix}
 	\subsection{Part 1:}
 	\subsubsection{Code:}
+	\begin{lstlisting}[caption={Part 1 a}]
+	% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+A_COL = imread('face.jpg');
+A_COL = uint8(vsg('Rotatep90', A_COL));
+disp('Image read done');
+
+% Display Image
+h=figure;
+imshow(uint8(A_COL));
+set(h,'Name','Input Image');
+saveas(h, 'Results\Q1\a\qaInput.jpg')
+
+% Convert to greyscale and display the result
+A=rgb2gray(A_COL);
+h=figure;
+imshow(uint8(A));
+set(h,'Name','Greyscale Input');
+saveas(h, 'Results\Q1\a\qaGreyscale.jpg')
+
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 1 b}]
+% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+A_COL = imread('face.jpg');
+A_COL = uint8(vsg('Rotatep90', A_COL));
+disp('Image read done');
+
+% Display Image
+h=figure;
+imshow(uint8(A_COL));
+set(h,'Name','Input Image');
+
+% Convert to greyscale and display the result
+A=rgb2gray(A_COL);
+h=figure;
+imshow(uint8(A));
+set(h,'Name','Greyscale Input');
+
+% Data driven threshold based on the max/min of the image histogram
+hi_grey=vsg('HighestGrey',A);
+disp('Highestgrey done');
+lo_grey=vsg('LowestGrey',A);
+disp('Lowestgrey done');
+thresh=uint8(3*(hi_grey+lo_grey)/4);
+
+% Output the calculated threshold to the command window
+string=['Data driven threshold is ' num2str(thresh)];
+disp(string);
+
+% Apply a fixed global threshold to the image and display the resultant binary image
+C=vsg('Threshold',A,thresh);
+h=figure;
+imshow(uint8(C));
+set(h,'Name','Threshold Data Drive');
+saveas(h, 'Results\Q1\b\qbThreshData.jpg')
+
+D=vsg('Threshold',A,125);
+h=figure;
+imshow(uint8(D));
+set(h,'Name','Threshold 125');
+saveas(h, 'Results\Q1\b\qbThresh125.jpg')
+
+E=vsg('Threshold',A,130);
+h=figure;
+imshow(uint8(E));
+set(h,'Name','Threshold 130');
+saveas(h, 'Results\Q1\b\qbThresh130.jpg')
+
+F=vsg('Threshold',A,140);
+h=figure;
+imshow(uint8(F));
+set(h,'Name','Threshold 140');
+saveas(h, 'Results\Q1\b\qbThresh140.jpg')
+
+disp('Threshold done');
+h=figure;
+subplot(2,2,1), imshow(uint8(C));
+subplot(2,2,2), imshow(uint8(D));
+subplot(2,2,3), imshow(uint8(E));
+subplot(2,2,4), imshow(uint8(F));
+set(h,'Name','Threshold Image');
+
+% Wait for "Any keey input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 1 c}]
+% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+A_COL = imread('face.jpg');
+A_COL = uint8(vsg('Rotatep90', A_COL));
+disp('Image read done');
+
+% Display Image
+h=figure;
+imshow(uint8(A_COL));
+set(h,'Name','Input Image');
+
+% Convert to greyscale and display the result
+A=rgb2gray(A_COL);
+h=figure;
+imshow(uint8(A));
+set(h,'Name','Greyscale Input');
+
+F=vsg('5x5Thresh',A,0);
+h=figure;
+imshow(uint8(F))
+set(h,'Name','5x5 Threshold');
+saveas(h, 'Results\Q1\c\qcThresh5x5.jpg')
+
+% Wait for "Any keey input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 1 d}]
+% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+A_COL = imread('face.jpg');
+A_COL = uint8(vsg('Rotatep90', A_COL));
+disp('Image read done');
+
+% Display Image
+h=figure;
+imshow(uint8(A_COL));
+set(h,'Name','Input Image');
+
+% Convert to greyscale and display the result
+A=rgb2gray(A_COL);
+h=figure;
+imshow(uint8(A));
+set(h,'Name','Greyscale Input');
+
+i=.0001;
+while i<10
+    noiseFileName = strcat('Results\Q1\d\qdVar', num2str(i), '.jpg');
+    ThreshFileName = strcat('Results\Q1\d\qdThresh', num2str(i), '.jpg');
+    FiveThreshFileName = strcat('Results\Q1\d\qd5x5', num2str(i), '.jpg');
+
+    B = imnoise(A, 'gaussian', 0, i);
+    h=figure;
+    imshow(uint8(B))
+    set(h,'Name',noiseFileName);
+    saveas(h, noiseFileName)
+
+    % Apply the threshold to the image and display the resultant binary image
+    E=vsg('Threshold',B,125);
+    disp('Threshold done');
+    h=figure;
+    imshow(uint8(E));
+    set(h,'Name','Threshold Image');
+    saveas(h, ThreshFileName)
+
+    % Mask boundary pixels to avoid any edge effects
+    E=vsg('MaskImg',E,5);
+
+    F=vsg('5x5Thresh',B,0);
+    h=figure;
+    imshow(uint8(F))
+    saveas(h, FiveThreshFileName)
+
+
+    i=i*10;
+end;
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
 	\subsection{Part 2:}
 	\subsubsection{Code:}
+\begin{lstlisting}[caption={Part 2 a}]
+	% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+i=1;
+inputImage = 'number_plate_1';
+saveDirectory = 'NumPlate1';
+inputFileName = strcat('data\', inputImage, '.jpg');
+saveFileName = strcat('Results\Q2\', saveDirectory, '\qa', inputImage , '.jpg');
+greyFileName = strcat('Results\Q2\', saveDirectory, '\qa', inputImage , 'Grey.jpg');
+lowFileName = strcat('Results\Q2\', saveDirectory, '\qa', inputImage , 'Low.jpg');
+midFileName = strcat('Results\Q2\', saveDirectory, '\qa', inputImage , 'Mid.jpg');
+notFileName = strcat('Results\Q2\', saveDirectory, '\qa', inputImage , 'Not.jpg');
+borderFileName = strcat('Results\Q2\', saveDirectory, '\qa', inputImage , 'Border.jpg');
+noBorderFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'NoBorder.jpg');
+bigCharFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'BigChar.jpg');
+remainCharsFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'Remain.jpg');
+addedCharFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'Added', num2str(i), '.jpg');
+cannyFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'Canny.jpg');
+overlayFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'Overlay.jpg');
+
+% Read Sample Image
+input_col = imread(inputFileName);
+disp('Image read done');
+
+% Display Image
+h=figure;
+imshow(uint8(input_col));
+set(h,'Name','Input Image');
+saveas(h, saveFileName)
+
+
+% Convert to greyscale and display the result
+in_img=rgb2gray(input_col);
+h=figure;
+imshow(uint8(in_img));
+set(h,'Name','Greyscale Input');
+saveas(h, greyFileName)
+
+
+% Remove number plate border
+[out_img1]=vsg('LowPass', in_img);
+h=figure;
+imshow(uint8(out_img1));
+set(h,'Name','Low Pass Filtered Image');
+saveas(h, lowFileName)
+
+[out_img2]=vsg('MidThresh',out_img1);
+h=figure;
+imshow(uint8(out_img2));
+set(h,'Name','MidThreshold Image');
+saveas(h, midFileName)
+
+[out_img3]=vsg('NOT',out_img2);
+h=figure;
+imshow(uint8(out_img3));
+set(h,'Name','Inverted (NOT) Image');
+saveas(h, notFileName)
+
+[out_img4]=vsg('BiggestBlob',out_img3);
+disp('BiggestBlob done');
+%F=uint8(F);
+h=figure;
+imshow(uint8(out_img4));
+set(h,'Name','BiggestBlob Image');
+saveas(h, borderFileName)
+
+[out_img5] = vsg('Subtract', out_img3, out_img4);
+h=figure;
+imshow(uint8(out_img5));
+set(h,'Name','Subtracted Biggest Blob Image');
+saveas(h, noBorderFileName)
+
+% Extract number plate numbers
+[out_img6] = vsg('BiggestBlob', out_img5);
+h=figure;
+imshow(uint8(out_img6));
+set(h,'Name','Biggest Blob Image');
+saveas(h, bigCharFileName)
+[biggestBlobCounter] = vsg('WPCounter', uint8(out_img6))
+
+[out_img5]=vsg('XOR', out_img5, out_img6);
+% Remove 1 pixel white border from image.
+[out_img5]=vsg('MaskImg', out_img5, 1);
+h=figure;
+imshow(uint8(out_img5));
+saveas(h, remainCharsFileName)
+
+while(vsg('WPCounter', vsg('BiggestBlob', out_img5))>(biggestBlobCounter/3))
+  [tempBlob]=vsg('BiggestBlob', out_img5);
+  h=figure;
+  imshow(uint8(tempBlob));
+  set(h,'Name','tempBlob');
+  [biggestBlobCounter] = vsg('WPCounter', uint8(tempBlob))
+  [out_img6]=vsg('XOR', out_img6, tempBlob);
+  h=figure;
+  imshow(uint8(out_img6));
+  addedCharFileName = strcat('Results\Q2\', saveDirectory ,'\qa', inputImage , 'Added', num2str(i), '.jpg');
+  saveas(h, addedCharFileName)
+  set(h,'Name','Remaining Blobs Image');
+  [out_img5]=vsg('Subtract', out_img5, tempBlob);
+  i=i+1;
+end
+% Count number of blobs in the image
+% Corresponds to the number of digits on the number plate
+[numBlobs] = vsg('CountBlobs', uint8(out_img6));
+disp(numBlobs);
+
+% Overlay the identified number plate numbers on
+% the original input image
+[out_img7, out_img8]=vsg('Canny', out_img6,  1.0, 5, 200);
+h=figure;
+imshow(uint8(out_img7));
+set(h,'Name','Edge Detector Image');
+saveas(h, cannyFileName)
+
+[out_img9] = vsg('Add', out_img7, in_img);
+h=figure;
+imshow(uint8(out_img9));
+set(h,'Name','Overlayed (Add) Image');
+saveas(h, overlayFileName)
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 2 b - Functions used to reduce lines of code}]
+function numBlobs = p2qb(im_path, noise_var)
+
+% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+%clc
+%clear all
+
+
+% Read Sample Image
+input_col = imread(im_path);
+disp('Image read done');
+
+input_noisy = imnoise(input_col, 'gaussian', 0, noise_var);
+
+
+% Display Image
+% h=figure;
+% imshow(uint8(input_col));
+% set(h,'Name','Input Image');
+
+% Convert to greyscale and display the result
+in_img=rgb2gray(input_noisy);
+% h=figure;
+% imshow(uint8(in_img));
+% set(h,'Name','Greyscale Input');
+
+% Call Function to remove number plate border
+[out_img1]=q2RemoveNumPlateBorder(in_img);
+
+% Call Function to extract number plate numbers
+[out_img2]=q2ExtractNumPlateNumbers(out_img1);
+
+% Count number of blobs in the image
+% Corresponds to the number of digits on the number plate
+[numBlobs] = vsg('CountBlobs', uint8(out_img2));
+disp(numBlobs);
+
+% Overlay the identified number plate numbers on
+% the original input image
+[out_img3]=q2Overlay(out_img2, in_img);
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+end
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 2 a Unit Test}]
+clc;
+
+%% Test Image 1
+
+clear all;
+assert(p2qa('data/number_plate_1.jpg')==7, 'Error in Output');
+
+%% Test Image 2
+
+clear all;
+assert(p2qa('data/number_plate_2.jpg')==7, 'Error in Output');
+
+%% Test Image 3
+
+clear all;
+assert(p2qa('data/number_plate_3.jpg')==6, 'Error in Output');
+
+%% Test Image 4
+
+clear all;
+assert(p2qa('data/number_plate_4.jpg')==8, 'Error in Output');
+
+%% Test Image 5
+
+clear all;
+assert(p2qa('data/number_plate_5.jpg')==7, 'Error in Output');
+
+%% Test Image 6
+
+clear all;
+assert(p2qa('data/number_plate_6.jpg')==7, 'Error in Output');
+
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 2 b Unit Test}]
+clc
+clear all
+
+%% Test 1
+i = 6;
+assert(p2qb('data/number_plate_1.jpg', i)==7, 'Error in Output')
+\end{lstlisting}
 	\subsubsection{Images:}
 	\subsection{Part 3:}
 	\subsubsection{Code:}
+\begin{lstlisting}[caption={Part 3 a}]
+	% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+in_col = imread('data\tie.jpg');
+disp('Image read done');
+mask_col = imread('data\template_tie.jpg');
+
+% Display Image
+h=figure;
+imshow(uint8(in_col));
+set(h,'Name','Input Image');
+saveas(h, 'Results\Q3\a\qaInput.jpg');
+
+h=figure;
+imshow(uint8(mask_col));
+set(h,'Name','Input Kernel');
+saveas(h, 'Results\Q3\a\qaTemplate.jpg');
+
+% Convert to greyscale and display the result
+in_img=rgb2gray(in_col);
+% in_img=vsg('RotateImg', in_img, 30);
+% in_img=vsg('RotateImg', in_img, 45);
+% in_img=vsg('RotateImg', in_img, 60);
+
+h=figure;
+imshow(uint8(in_img));
+set(h,'Name','Greyscale Input');
+% saveas(h, 'Results\Q3\a\qaInputGrey.jpg');
+% saveas(h, 'Results\Q3\a\qaInputRot30.jpg');
+% saveas(h, 'Results\Q3\a\qaInputRot45.jpg');
+% saveas(h, 'Results\Q3\a\qaInputRot60.jpg');
+
+mask=rgb2gray(mask_col);
+h=figure;
+imshow(uint8(mask));
+set(h,'Name','Greyscale Kernel');
+saveas(h, 'Results\Q3\a\qaTemplateGrey.jpg');
+mask_rot=vsg('RotateImg', mask, 180);
+h=figure;
+imshow(uint8(mask_rot));
+set(h, 'Name', 'Rotated Greyscale Kernel');
+saveas(h, 'Results\Q3\a\qaTemplateGreyRot.jpg');
+
+[out_img1]=vsg('Convolution', in_img, mask);
+h=figure;
+imshow(uint8(out_img1));
+% saveas(h, 'Results\Q3\a\qaConv1.jpg');
+% saveas(h, 'Results\Q3\a\qaConv1-30.jpg');
+% saveas(h, 'Results\Q3\a\qaConv1-45.jpg');
+% saveas(h, 'Results\Q3\a\qaConv1-60.jpg');
+[out_img2]=vsg('Convolution', in_img, mask_rot);
+h=figure;
+imshow(uint8(out_img2));
+% saveas(h, 'Results\Q3\a\qaConv2.jpg');
+% saveas(h, 'Results\Q3\a\qaConv2-30.jpg');
+% saveas(h, 'Results\Q3\a\qaConv2-45.jpg');
+% saveas(h, 'Results\Q3\a\qaConv2-60.jpg');
+[out_img2]=vsg('Add', out_img1, out_img2);
+h=figure;
+imshow(uint8(out_img2));
+% saveas(h, 'Results\Q3\a\qaAddedConv.jpg');
+% saveas(h, 'Results\Q3\a\qaAddedConv30.jpg');
+% saveas(h, 'Results\Q3\a\qaAddedConv45.jpg');
+% saveas(h, 'Results\Q3\a\qaAddedConv60.jpg');
+
+hi_grey=vsg('HighestGrey',out_img2);
+disp('Highestgrey done');
+lo_grey=vsg('LowestGrey',out_img2);
+disp('Lowestgrey done');
+thresh=uint8(3*(hi_grey+lo_grey)/4);
+[out_img3]=vsg('Threshold', uint8(out_img2), thresh);
+%[out_img3]=vsg('Threshold', uint8(out_img2), 60);
+h=figure;
+imshow(uint8(out_img3));
+% saveas(h, 'Results\Q3\a\qaThresh.jpg');
+% saveas(h, 'Results\Q3\a\qaThresh30.jpg');
+% saveas(h, 'Results\Q3\a\qaThresh45.jpg');
+% saveas(h, 'Results\Q3\a\qaThresh60.jpg');
+% saveas(h, 'Results\Q3\a\qaThreshVal60.jpg');
+[out_img4]=vsg('Centroid', out_img3);
+h=figure;
+imshow(out_img4);
+% saveas(h, 'Results\Q3\a\qaCentroid.jpg');
+% saveas(h, 'Results\Q3\a\qaCentroid30.jpg');
+% saveas(h, 'Results\Q3\a\qaCentroid45.jpg');
+% saveas(h, 'Results\Q3\a\qaCentroid60.jpg');
+[out_img5]=vsg('Point2Square', out_img4);
+h=figure;
+imshow(uint8(out_img5));
+% saveas(h, 'Results\Q3\a\qaP2S.jpg');
+% saveas(h, 'Results\Q3\a\qaP2S30.jpg');
+% saveas(h, 'Results\Q3\a\qaP2S45.jpg');
+% saveas(h, 'Results\Q3\a\qaP2S60.jpg');
+[out_img6]=vsg('Add', out_img5, in_col);
+h=figure;
+imshow(uint8(out_img6));
+% saveas(h, 'Results\Q3\a\qaOverlay.jpg');
+% saveas(h, 'Results\Q3\a\qaOverlay30.jpg');
+% saveas(h, 'Results\Q3\a\qaOverlay45.jpg');
+% saveas(h, 'Results\Q3\a\qaOverlay60.jpg');
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 3 b}]
+% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+in_col = imread('data\tie.jpg');
+disp('Image read done');
+mask_col = imread('data\template_tie.jpg');
+
+% Display Image
+h=figure;
+imshow(uint8(in_col));
+set(h,'Name','Input Image');
+
+h=figure;
+imshow(uint8(mask_col));
+set(h,'Name','Input Kernel');
+
+% Convert to greyscale and display the result
+in_img=rgb2gray(in_col);
+h=figure;
+imshow(uint8(in_img));
+set(h,'Name','Greyscale Input');
+
+test=in_img;
+test(2:size(in_img,1)-1,2:size(in_img,2)-1,:)=0;
+h=figure;
+imshow(uint8(test));
+[dil1, dil2]=vsg('ReconByDil', in_img, test, 8);
+h=figure;
+imshow(uint8(dil2));
+saveas(h, 'Results\Q3\b\qbDilation.jpg');
+
+mask=rgb2gray(mask_col);
+h=figure;
+imshow(uint8(mask));
+set(h,'Name','Greyscale Kernel');
+mask_rot=vsg('RotateImg', mask, 180);
+
+[out_img1]=vsg('Convolution', dil2, mask);
+h=figure;
+imshow(uint8(out_img1));
+[out_img2]=vsg('Convolution', dil2, mask_rot);
+h=figure;
+imshow(uint8(out_img2));
+saveas(h, 'Results\Q3\b\qbConvolution.jpg');
+
+[out_img2]=vsg('Add', out_img1, out_img2);
+
+hi_grey=vsg('HighestGrey',out_img2);
+disp('Highestgrey done');
+lo_grey=vsg('LowestGrey',out_img2);
+disp('Lowestgrey done');
+thresh=uint8(3*(hi_grey+lo_grey)/5);
+[out_img3]=vsg('Threshold', uint8(out_img2), thresh);
+h=figure;
+imshow(uint8(out_img3));
+saveas(h, 'Results\Q3\b\qbThreshold.jpg');
+
+[out_img4]=vsg('Centroid', out_img3);
+h=figure;
+imshow(out_img4);
+saveas(h, 'Results\Q3\b\qbCentroid.jpg');
+
+numPatterns=vsg('WPCounter', out_img4);
+[out_img5]=vsg('Point2Square', out_img4);
+h=figure;
+imshow(uint8(out_img5));
+saveas(h, 'Results\Q3\b\qbP2S.jpg');
+
+[out_img6]=vsg('Add', out_img5, in_col);
+h=figure;
+imshow(uint8(out_img6));
+saveas(h, 'Results\Q3\b\qbOverlay.jpg');
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Part 3 c}]
+% Setup Paths to VSG Toolbox and Local Data
+addpath('C:\VSG_IPA_toolbox');
+addpath('D:\Documents\College\Masters\Semester1\EE453-ImageProcessingAndAnalysis\Personal\Assignment');
+
+% Clear workspace and free up system memory
+clc
+clear all
+
+% Read Sample Image
+in_col = imread('data\tie.jpg');
+disp('Image read done');
+mask_col = imread('data\template_tie.jpg');
+
+% Display Image
+h=figure;
+imshow(uint8(in_col));
+set(h,'Name','Input Image');
+
+h=figure;
+imshow(uint8(mask_col));
+set(h,'Name','Input Kernel');
+
+% Convert to greyscale and display the result
+in_img=rgb2gray(in_col);
+
+test=in_img;
+test(2:size(in_img,1)-1,2:size(in_img,2)-1,:)=0;
+h=figure;
+imshow(uint8(test));
+
+i=0.0001;
+while i<10
+in_img1=imnoise(in_img, 'gaussian', 0, i);
+h=figure;
+imshow(uint8(in_img1));
+saveas(h, strcat('Results\Q3\c\qcNoise', num2str(i), '.jpg'));
+set(h,'Name','Greyscale Input');
+
+[dil1, dil2]=vsg('ReconByDil', in_img1, test, 8);
+h=figure;
+imshow(uint8(dil2));
+saveas(h, strcat('Results\Q3\c\qcDilation', num2str(i), '.jpg'));
+
+mask=rgb2gray(mask_col);
+h=figure;
+imshow(uint8(mask));
+set(h,'Name','Greyscale Kernel');
+mask_rot=vsg('RotateImg', mask, 180);
+
+[out_img1]=vsg('Convolution', dil2, mask);
+h=figure;
+imshow(uint8(out_img1));
+[out_img2]=vsg('Convolution', dil2, mask_rot);
+h=figure;
+imshow(uint8(out_img2));
+[out_img2]=vsg('Add', out_img1, out_img2);
+h=figure;
+imshow(uint8(out_img2));
+saveas(h, strcat('Results\Q3\c\qcConv', num2str(i), '.jpg'));
+
+hi_grey=vsg('HighestGrey',out_img2);
+disp('Highestgrey done');
+lo_grey=vsg('LowestGrey',out_img2);
+disp('Lowestgrey done');
+thresh=uint8(3*(hi_grey+lo_grey)/5);
+[out_img3]=vsg('Threshold', uint8(out_img2), thresh);
+h=figure;
+imshow(uint8(out_img3));
+saveas(h, strcat('Results\Q3\c\qcThresh', num2str(i), '.jpg'));
+[out_img4]=vsg('Centroid', out_img3);
+h=figure;
+imshow(out_img4);
+saveas(h, strcat('Results\Q3\c\qcCentroid', num2str(i), '.jpg'));
+
+numPatterns=vsg('WPCounter', out_img4);
+[out_img5]=vsg('Point2Square', out_img4);
+h=figure;
+imshow(uint8(out_img5));
+saveas(h, strcat('Results\Q3\c\qcP2S', num2str(i), '.jpg'));
+
+[out_img6]=vsg('Add', out_img5, in_col);
+h=figure;
+imshow(uint8(out_img6));
+saveas(h, strcat('Results\Q3\c\qcOverlay', num2str(i), '.jpg'));
+
+i=i*10;
+end
+
+% Wait for "Any key input" before deleting all figures
+pause;
+close all force;
+\end{lstlisting}
 	\subsubsection{Images:}
 \end{document}

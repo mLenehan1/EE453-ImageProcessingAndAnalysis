@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.2)  11 NOV 2019 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.10.2)  12 NOV 2019 01:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -442,6 +442,57 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 LaTeX Warning: Label `fig:' multiply defined.
 
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
 )
 \openout1 = `AssignmentReport.aux'.
 
@@ -534,68 +585,33 @@ File: Results/Q1/a/qaInput.jpg Graphic file (type jpg)
 <use Results/Q1/a/qaInput.jpg>
 Package pdftex.def Info: Results/Q1/a/qaInput.jpg  used on input line 142.
 (pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
-
-Overfull \hbox (27.77042pt too wide) in paragraph at lines 142--142
- [][] 
- []
-
 <Results/Q1/a/qaGreyscale.jpg, id=17, 875.27pt x 948.54375pt>
 File: Results/Q1/a/qaGreyscale.jpg Graphic file (type jpg)
 <use Results/Q1/a/qaGreyscale.jpg>
 Package pdftex.def Info: Results/Q1/a/qaGreyscale.jpg  used on input line 144.
 (pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
-
-Overfull \hbox (27.77042pt too wide) in paragraph at lines 144--144
- [][] 
- []
-
-[3]
+ [3]
 <Results/Q1/b/qbThreshData.jpg, id=21, 875.27pt x 948.54375pt>
 File: Results/Q1/b/qbThreshData.jpg Graphic file (type jpg)
 <use Results/Q1/b/qbThreshData.jpg>
 Package pdftex.def Info: Results/Q1/b/qbThreshData.jpg  used on input line 161.
 (pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
-
-Overfull \hbox (27.77042pt too wide) in paragraph at lines 161--161
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
-[]\T1/cmr/m/n/9 (a) |Data Driven
- []
-
 <Results/Q1/b/qbThresh125.jpg, id=22, 875.27pt x 948.54375pt>
 File: Results/Q1/b/qbThresh125.jpg Graphic file (type jpg)
 <use Results/Q1/b/qbThresh125.jpg>
 Package pdftex.def Info: Results/Q1/b/qbThresh125.jpg  used on input line 163.
 (pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
-
-Overfull \hbox (27.77042pt too wide) in paragraph at lines 163--163
- [][] 
- []
-
 <Results/Q1/b/qbThresh130.jpg, id=23, 875.27pt x 948.54375pt>
 File: Results/Q1/b/qbThresh130.jpg Graphic file (type jpg)
 <use Results/Q1/b/qbThresh130.jpg>
 Package pdftex.def Info: Results/Q1/b/qbThresh130.jpg  used on input line 170.
 (pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
-
-Overfull \hbox (27.77042pt too wide) in paragraph at lines 170--170
- [][] 
- []
-
 <Results/Q1/b/qbThresh140.jpg, id=24, 875.27pt x 948.54375pt>
 File: Results/Q1/b/qbThresh140.jpg Graphic file (type jpg)
 <use Results/Q1/b/qbThresh140.jpg>
 Package pdftex.def Info: Results/Q1/b/qbThresh140.jpg  used on input line 172.
 (pdftex.def)             Requested size: 131.27147pt x 142.26378pt.
-
-Overfull \hbox (27.77042pt too wide) in paragraph at lines 172--172
- [][] 
- []
-
-[4 <./Results/Q1/a/qaInput.jpg> <./Results/Q1/a/qaGreyscale.jpg> <./Results/Q1/b/qbThreshData.jpg> <./Results/Q1/b/qbThresh125.jpg>]
+ [4 <./Results/Q1/a/qaInput.jpg> <./Results/Q1/a/qaGreyscale.jpg> <./Results/Q1/b/qbThreshData.jpg> <./Results/Q1/b/qbThresh125.jpg>]
 <Results/Q1/c/qcThresh5x5.jpg, id=30, 875.27pt x 948.54375pt>
 File: Results/Q1/c/qcThresh5x5.jpg Graphic file (type jpg)
 <use Results/Q1/c/qcThresh5x5.jpg>
@@ -793,68 +809,33 @@ Overfull \hbox (2.3431pt too wide) in paragraph at lines 374--374
 File: Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg  used on input line 385.
-(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
-
-Overfull \hbox (2.3431pt too wide) in paragraph at lines 385--385
- [][] 
- []
-
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 <Results/Q2/NumPlate1/qanumber_plate_1Not.jpg, id=66, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1Not.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Not.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Not.jpg  used on input line 387.
-(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
-
-Overfull \hbox (2.3431pt too wide) in paragraph at lines 387--387
- [][] 
- []
-
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 [10 <./Results/Q2/NumPlate1/qanumber_plate_1.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Grey.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Low.jpg>]
 <Results/Q2/NumPlate1/qanumber_plate_1Border.jpg, id=70, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1Border.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Border.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Border.jpg  used on input line 394.
-(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
-
-Overfull \hbox (2.3431pt too wide) in paragraph at lines 394--394
- [][] 
- []
-
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 <Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg, id=71, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg  used on input line 396.
-(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
-
-Overfull \hbox (2.3431pt too wide) in paragraph at lines 396--396
- [][] 
- []
-
-
-Underfull \hbox (badness 7273) in paragraph at lines 396--396
-[]\T1/cmr/m/n/9 (b) |Biggest Blob Re-
- []
-
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 <Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg, id=72, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg  used on input line 408.
-(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
-
-Overfull \hbox (2.3431pt too wide) in paragraph at lines 408--408
- [][] 
- []
-
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 <Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg, id=73, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg  used on input line 410.
-(pdftex.def)             Requested size: 105.84415pt x 28.45274pt.
-
-Overfull \hbox (2.3431pt too wide) in paragraph at lines 410--410
- [][] 
- []
-
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 <Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg, id=74, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg>
@@ -919,30 +900,516 @@ Overfull \hbox (2.3431pt too wide) in paragraph at lines 432--432
 File: Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg  used on input line 439.
-(pdftex.def)             Requested size: 132.31456pt x 35.56593pt.
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
 <Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg, id=81, 2457.18pt x 660.4675pt>
 File: Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg Graphic file (type jpg)
 <use Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg>
 Package pdftex.def Info: Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg  used on input line 441.
-(pdftex.def)             Requested size: 132.31456pt x 35.56593pt.
-[11 <./Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Not.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Border.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg>] [12 <./Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg>] [13] (./AssignmentReport.aux)
+(pdftex.def)             Requested size: 158.74747pt x 42.67912pt.
+[11 <./Results/Q2/NumPlate1/qanumber_plate_1Mid.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Not.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Border.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1NoBorder.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1BigChar.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Remain.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added1.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added2.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added3.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added4.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added5.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Added6.jpg>] [12 <./Results/Q2/NumPlate1/qanumber_plate_1Canny.jpg> <./Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg>]
+<Results/Q3/a/qaInput.jpg, id=89, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaInput.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaInput.jpg>
+Package pdftex.def Info: Results/Q3/a/qaInput.jpg  used on input line 510.
+(pdftex.def)             Requested size: 180.92352pt x 142.26378pt.
+
+Overfull \hbox (8.42352pt too wide) in paragraph at lines 510--510
+ [][] 
+ []
+
+<Results/Q3/a/qaInputGrey.jpg, id=90, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaInputGrey.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaInputGrey.jpg>
+Package pdftex.def Info: Results/Q3/a/qaInputGrey.jpg  used on input line 512.
+(pdftex.def)             Requested size: 180.92352pt x 142.26378pt.
+
+Overfull \hbox (8.42352pt too wide) in paragraph at lines 512--512
+ [][] 
+ []
+
+<Results/Q3/a/qaTemplate.jpg, id=91, 362.35374pt x 239.89626pt>
+File: Results/Q3/a/qaTemplate.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaTemplate.jpg>
+Package pdftex.def Info: Results/Q3/a/qaTemplate.jpg  used on input line 519.
+(pdftex.def)             Requested size: 128.93228pt x 85.35826pt.
+
+Overfull \hbox (25.43123pt too wide) in paragraph at lines 519--519
+ [][] 
+ []
+
+<Results/Q3/a/qaTemplateGrey.jpg, id=92, 362.35374pt x 239.89626pt>
+File: Results/Q3/a/qaTemplateGrey.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaTemplateGrey.jpg>
+Package pdftex.def Info: Results/Q3/a/qaTemplateGrey.jpg  used on input line 521.
+(pdftex.def)             Requested size: 128.93228pt x 85.35826pt.
+
+Overfull \hbox (25.43123pt too wide) in paragraph at lines 521--521
+ [][] 
+ []
+
+<Results/Q3/a/qaTemplateGreyRot.jpg, id=93, 362.35374pt x 239.89626pt>
+File: Results/Q3/a/qaTemplateGreyRot.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaTemplateGreyRot.jpg>
+Package pdftex.def Info: Results/Q3/a/qaTemplateGreyRot.jpg  used on input line 523.
+(pdftex.def)             Requested size: 128.93228pt x 85.35826pt.
+
+Overfull \hbox (25.43123pt too wide) in paragraph at lines 523--523
+ [][] 
+ []
+
+<Results/Q3/a/qaConv.jpg, id=94, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv.jpg  used on input line 530.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 530--530
+ [][] 
+ []
+
+<Results/Q3/a/qaConv2.jpg, id=95, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv2.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv2.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv2.jpg  used on input line 532.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 532--532
+ [][] 
+ []
+
+<Results/Q3/a/qaAddedConv.jpg, id=96, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaAddedConv.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaAddedConv.jpg>
+Package pdftex.def Info: Results/Q3/a/qaAddedConv.jpg  used on input line 534.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 534--534
+ [][] 
+ []
+
+[13 <./Results/Q3/a/qaInput.jpg> <./Results/Q3/a/qaInputGrey.jpg>]
+<Results/Q3/a/qaThresh.jpg, id=101, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThresh.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThresh.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThresh.jpg  used on input line 542.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 542--542
+ [][] 
+ []
+
+<Results/Q3/a/qaCentroid.jpg, id=102, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaCentroid.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaCentroid.jpg>
+Package pdftex.def Info: Results/Q3/a/qaCentroid.jpg  used on input line 544.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 544--544
+ [][] 
+ []
+
+<Results/Q3/a/qaP2S.jpg, id=103, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaP2S.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaP2S.jpg>
+Package pdftex.def Info: Results/Q3/a/qaP2S.jpg  used on input line 546.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 546--546
+ [][] 
+ []
+
+<Results/Q3/a/qaOverlay.jpg, id=104, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaOverlay.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaOverlay.jpg>
+Package pdftex.def Info: Results/Q3/a/qaOverlay.jpg  used on input line 554.
+(pdftex.def)             Requested size: 180.92352pt x 142.26378pt.
+<Results/Q3/a/qaInputRot30.jpg, id=105, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaInputRot30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaInputRot30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaInputRot30.jpg  used on input line 561.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 561--561
+ [][] 
+ []
+
+<Results/Q3/a/qaInputRot45.jpg, id=106, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaInputRot45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaInputRot45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaInputRot45.jpg  used on input line 563.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 563--563
+ [][] 
+ []
+
+<Results/Q3/a/qaInputRot60.jpg, id=107, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaInputRot60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaInputRot60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaInputRot60.jpg  used on input line 565.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 565--565
+ [][] 
+ []
+
+[14 <./Results/Q3/a/qaTemplate.jpg> <./Results/Q3/a/qaTemplateGrey.jpg> <./Results/Q3/a/qaTemplateGreyRot.jpg> <./Results/Q3/a/qaConv.jpg> <./Results/Q3/a/qaConv2.jpg> <./Results/Q3/a/qaAddedConv.jpg> <./Results/Q3/a/qaThresh.jpg> <./Results/Q3/a/qaCentroid.jpg> <./Results/Q3/a/qaP2S.jpg>]
+<Results/Q3/a/qaConv1-30.jpg, id=111, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv1-30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv1-30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv1-30.jpg  used on input line 572.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 572--572
+ [][] 
+ []
+
+<Results/Q3/a/qaConv1-45.jpg, id=112, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv1-45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv1-45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv1-45.jpg  used on input line 574.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 574--574
+ [][] 
+ []
+
+<Results/Q3/a/qaConv1-60.jpg, id=113, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv1-60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv1-60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv1-60.jpg  used on input line 576.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 576--576
+ [][] 
+ []
+
+<Results/Q3/a/qaConv2-30.jpg, id=114, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv2-30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv2-30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv2-30.jpg  used on input line 583.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 583--583
+ [][] 
+ []
+
+<Results/Q3/a/qaConv2-45.jpg, id=115, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv2-45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv2-45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv2-45.jpg  used on input line 585.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 585--585
+ [][] 
+ []
+
+<Results/Q3/a/qaConv2-60.jpg, id=116, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaConv2-60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaConv2-60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaConv2-60.jpg  used on input line 587.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 587--587
+ [][] 
+ []
+
+<Results/Q3/a/qaAddedConv30.jpg, id=117, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaAddedConv30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaAddedConv30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaAddedConv30.jpg  used on input line 594.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 594--594
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 594--594
+[]\T1/cmr/m/n/9 (a) |Ad-ded Con-vo-lu-tion
+ []
+
+<Results/Q3/a/qaAddedConv45.jpg, id=118, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaAddedConv45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaAddedConv45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaAddedConv45.jpg  used on input line 596.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 596--596
+ [][] 
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 596--596
+[]\T1/cmr/m/n/9 (b) |Ad-ded Con-vo-lu-tion
+ []
+
+<Results/Q3/a/qaAddedConv60.jpg, id=119, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaAddedConv60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaAddedConv60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaAddedConv60.jpg  used on input line 598.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 598--598
+ [][] 
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 598--598
+[]\T1/cmr/m/n/9 (c) |Ad-ded Con-vo-lu-tion
+ []
+
+[15 <./Results/Q3/a/qaOverlay.jpg> <./Results/Q3/a/qaInputRot30.jpg> <./Results/Q3/a/qaInputRot45.jpg> <./Results/Q3/a/qaInputRot60.jpg> <./Results/Q3/a/qaConv1-30.jpg> <./Results/Q3/a/qaConv1-45.jpg> <./Results/Q3/a/qaConv1-60.jpg>]
+<Results/Q3/a/qaThresh30.jpg, id=125, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThresh30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThresh30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThresh30.jpg  used on input line 605.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 605--605
+ [][] 
+ []
+
+<Results/Q3/a/qaThresh45.jpg, id=126, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThresh45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThresh45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThresh45.jpg  used on input line 607.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 607--607
+ [][] 
+ []
+
+<Results/Q3/a/qaThresh60.jpg, id=127, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThresh60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThresh60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThresh60.jpg  used on input line 609.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 609--609
+ [][] 
+ []
+
+<Results/Q3/a/qaCentroid30.jpg, id=128, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaCentroid30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaCentroid30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaCentroid30.jpg  used on input line 616.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 616--616
+ [][] 
+ []
+
+<Results/Q3/a/qaCentroid45.jpg, id=129, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaCentroid45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaCentroid45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaCentroid45.jpg  used on input line 618.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 618--618
+ [][] 
+ []
+
+<Results/Q3/a/qaCentroid60.jpg, id=130, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaCentroid60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaCentroid60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaCentroid60.jpg  used on input line 620.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 620--620
+ [][] 
+ []
+
+<Results/Q3/a/qaP2S30.jpg, id=131, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaP2S30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaP2S30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaP2S30.jpg  used on input line 627.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 627--627
+ [][] 
+ []
+
+<Results/Q3/a/qaP2S45.jpg, id=132, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaP2S45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaP2S45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaP2S45.jpg  used on input line 629.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 629--629
+ [][] 
+ []
+
+<Results/Q3/a/qaP2S60.jpg, id=133, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaP2S60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaP2S60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaP2S60.jpg  used on input line 631.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 631--631
+ [][] 
+ []
+
+<Results/Q3/a/qaOverlay30.jpg, id=134, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaOverlay30.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaOverlay30.jpg>
+Package pdftex.def Info: Results/Q3/a/qaOverlay30.jpg  used on input line 638.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 638--638
+ [][] 
+ []
+
+<Results/Q3/a/qaOverlay45.jpg, id=135, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaOverlay45.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaOverlay45.jpg>
+Package pdftex.def Info: Results/Q3/a/qaOverlay45.jpg  used on input line 640.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 640--640
+ [][] 
+ []
+
+<Results/Q3/a/qaOverlay60.jpg, id=136, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaOverlay60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaOverlay60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaOverlay60.jpg  used on input line 642.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 642--642
+ [][] 
+ []
+
+[16 <./Results/Q3/a/qaConv2-30.jpg> <./Results/Q3/a/qaConv2-45.jpg> <./Results/Q3/a/qaConv2-60.jpg> <./Results/Q3/a/qaAddedConv30.jpg> <./Results/Q3/a/qaAddedConv45.jpg> <./Results/Q3/a/qaAddedConv60.jpg> <./Results/Q3/a/qaThresh30.jpg> <./Results/Q3/a/qaThresh45.jpg> <./Results/Q3/a/qaThresh60.jpg> <./Results/Q3/a/qaCentroid30.jpg> <./Results/Q3/a/qaCentroid45.jpg> <./Results/Q3/a/qaCentroid60.jpg>]
+<Results/Q3/a/qaThreshVal32.jpg, id=140, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThreshVal32.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThreshVal32.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThreshVal32.jpg  used on input line 649.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 649--649
+ [][] 
+ []
+
+<Results/Q3/a/qaThreshVal50.jpg, id=141, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThreshVal50.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThreshVal50.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThreshVal50.jpg  used on input line 651.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 651--651
+ [][] 
+ []
+
+<Results/Q3/a/qaThreshVal60.jpg, id=142, 995.72pt x 782.925pt>
+File: Results/Q3/a/qaThreshVal60.jpg Graphic file (type jpg)
+<use Results/Q3/a/qaThreshVal60.jpg>
+Package pdftex.def Info: Results/Q3/a/qaThreshVal60.jpg  used on input line 653.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 653--653
+ [][] 
+ []
+
+<Results/Q3/b/qbDilation.jpg, id=143, 995.72pt x 782.925pt>
+File: Results/Q3/b/qbDilation.jpg Graphic file (type jpg)
+<use Results/Q3/b/qbDilation.jpg>
+Package pdftex.def Info: Results/Q3/b/qbDilation.jpg  used on input line 661.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 661--661
+ [][] 
+ []
+
+<Results/Q3/b/qbConvolution.jpg, id=144, 995.72pt x 782.925pt>
+File: Results/Q3/b/qbConvolution.jpg Graphic file (type jpg)
+<use Results/Q3/b/qbConvolution.jpg>
+Package pdftex.def Info: Results/Q3/b/qbConvolution.jpg  used on input line 663.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 663--663
+ [][] 
+ []
+
+<Results/Q3/b/qbThreshold.jpg, id=145, 995.72pt x 782.925pt>
+File: Results/Q3/b/qbThreshold.jpg Graphic file (type jpg)
+<use Results/Q3/b/qbThreshold.jpg>
+Package pdftex.def Info: Results/Q3/b/qbThreshold.jpg  used on input line 665.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 665--665
+ [][] 
+ []
+
+<Results/Q3/b/qbCentroid.jpg, id=146, 995.72pt x 782.925pt>
+File: Results/Q3/b/qbCentroid.jpg Graphic file (type jpg)
+<use Results/Q3/b/qbCentroid.jpg>
+Package pdftex.def Info: Results/Q3/b/qbCentroid.jpg  used on input line 673.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 673--673
+ [][] 
+ []
+
+<Results/Q3/b/qbP2S.jpg, id=147, 995.72pt x 782.925pt>
+File: Results/Q3/b/qbP2S.jpg Graphic file (type jpg)
+<use Results/Q3/b/qbP2S.jpg>
+Package pdftex.def Info: Results/Q3/b/qbP2S.jpg  used on input line 675.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 675--675
+ [][] 
+ []
+
+<Results/Q3/b/qbOverlay.jpg, id=148, 995.72pt x 782.925pt>
+File: Results/Q3/b/qbOverlay.jpg Graphic file (type jpg)
+<use Results/Q3/b/qbOverlay.jpg>
+Package pdftex.def Info: Results/Q3/b/qbOverlay.jpg  used on input line 677.
+(pdftex.def)             Requested size: 108.55716pt x 85.35826pt.
+
+Overfull \hbox (5.0561pt too wide) in paragraph at lines 677--677
+ [][] 
+ []
+
+[17 <./Results/Q3/a/qaP2S30.jpg> <./Results/Q3/a/qaP2S45.jpg> <./Results/Q3/a/qaP2S60.jpg> <./Results/Q3/a/qaOverlay30.jpg> <./Results/Q3/a/qaOverlay45.jpg> <./Results/Q3/a/qaOverlay60.jpg> <./Results/Q3/a/qaThreshVal32.jpg> <./Results/Q3/a/qaThreshVal50.jpg> <./Results/Q3/a/qaThreshVal60.jpg> <./Results/Q3/b/qbDilation.jpg> <./Results/Q3/b/qbConvolution.jpg> <./Results/Q3/b/qbThreshold.jpg>]
+<Results/Q3/c/qcOverlay001.jpg, id=152, 995.72pt x 782.925pt>
+File: Results/Q3/c/qcOverlay001.jpg Graphic file (type jpg)
+<use Results/Q3/c/qcOverlay001.jpg>
+Package pdftex.def Info: Results/Q3/c/qcOverlay001.jpg  used on input line 685.
+(pdftex.def)             Requested size: 180.92352pt x 142.26378pt.
+
+Overfull \hbox (8.42352pt too wide) in paragraph at lines 685--685
+ [][] 
+ []
+
+<Results/Q3/c/qcOverlay01.jpg, id=153, 995.72pt x 782.925pt>
+File: Results/Q3/c/qcOverlay01.jpg Graphic file (type jpg)
+<use Results/Q3/c/qcOverlay01.jpg>
+Package pdftex.def Info: Results/Q3/c/qcOverlay01.jpg  used on input line 687.
+(pdftex.def)             Requested size: 180.92352pt x 142.26378pt.
+
+Overfull \hbox (8.42352pt too wide) in paragraph at lines 687--687
+ [][] 
+ []
+
+[18 <./Results/Q3/b/qbCentroid.jpg> <./Results/Q3/b/qbP2S.jpg> <./Results/Q3/b/qbOverlay.jpg> <./Results/Q3/c/qcOverlay001.jpg> <./Results/Q3/c/qcOverlay01.jpg>] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] (./AssignmentReport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8009 strings out of 492615
- 117358 string characters out of 6131390
- 184088 words of memory out of 5000000
- 11728 multiletter control sequences out of 15000+600000
- 13828 words of font info for 41 fonts, out of 8000000 for 9000
+ 8253 strings out of 492615
+ 124208 string characters out of 6131390
+ 332088 words of memory out of 5000000
+ 11922 multiletter control sequences out of 15000+600000
+ 14163 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,9n,46p,295b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on AssignmentReport.pdf (13 pages, 5456189 bytes).
+ 42i,9n,46p,295b,1571s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on AssignmentReport.pdf (34 pages, 6842130 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 252 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 
