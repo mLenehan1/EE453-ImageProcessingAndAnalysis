@@ -46,7 +46,9 @@
 	intensity value is greater than the threshold, it's value is set to
 	white, otherwise it is set to black.
 	\subsection{Techniques}
-	In completing this section of the assignment, the following techniques
+	A number of techniques are used in the completion of this assignment. As
+	such each technique will only be introduced once, on it's first use. In
+	completing this section of the assignment, the following techniques
 	are utilised:
 	\subsubsection{Part a}
 	\underline{\textbf{Load Image}}
@@ -76,7 +78,7 @@
 	otherwise it is set to white.
 	\subsubsection{Part d}
 	\underline{\textbf{Gaussian Noise}}
-	The Matlab ``imnoise()'' function, when used with the `gaussian' input
+	\par The Matlab ``imnoise()'' function, when used with the `gaussian' input
 	parameter, applies Gaussian noise with mean specified by input
 	parameter `m', and variance `var', e.g:
 	\begin{lstlisting}
@@ -150,7 +152,8 @@
 	values, to the input greyscale image. The ``Threshold'' function returns
 	images with the same dimensions as the input image, however the data
 	type returned is ``double'' rather than ``integer''. The initial value of the
-	threshold is 199, calculated by taking !!!!!!!!!. As this threshold does not
+	threshold is 199, calculated by taking $\frac{3}{4} \times (Higghest
+	Grey Intensity + Lowest Grey Intensity)$.As this threshold does not
 	provide adequate separation of the features in the image, arbitrary
 	values of 125, 130, and 140 are also used. The image thresholded at 125
 	has the greatest level of separation between the face and background,
@@ -251,8 +254,81 @@
 		\caption{Thresholded Images after Gaussian Noise (1 Variance)}
 		\label{fig:}
 	\end{figure}
-	\par It can be seen that until a variance of approximately
+	\par It can be seen that until a variance of approximately 0.01, the
+	global threshold output provides good separation of the background and
+	foreground, with good segmentation of the facial features.
+	\par At a variance value of 0.1, there is less separation of the
+	foreground and background, however, the facial features are still
+	visible.
+	\par The final tested noise variance is a value of 1, at which point the
+	global and adaptive thresholds provide similar levels of separation.
 	\subsection{Conclusion}
+	Inspection of the workspace following this section shows the data types
+	and dimensions of the structures used.
+	\par The workspace of part a shows the reduction of the dimensions from
+	the input image to the greyscale image. The removal of the three
+	channels representing RGB colour allows for much faster computations,
+	due to a reduction in data to be processed.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q1/a/Workspace.jpg}%
+		\caption{Part a Workspace}
+		\label{fig:}
+	\end{figure}
+	\par The workspace of part b shows the dimensions of the images,
+	following the threshold function. The images are of the same dimension
+	as the input image, however their values are stored as type ``double''
+	rather than integer.
+	\par The ``data driven'' threshold value can be seen as being calculated
+	as 199. This threshold value, when applied to the image, was determined
+	to be suboptimal. As such, alternative values for the threshold value
+	were tested, with the optimal choice being 125.
+	\par Choosing the optimal threshold value for a global threshold
+	function is difficult for a number of reasons, namely uneven lighting
+	conditions, and, in the case of the input images, irregular surfaces
+	such as glasses and facial hair. These features cause the shadowing on
+	the left side of the image, the streak covering the left eye (a shine on
+	the glasses), and the blurring surrounding the lips.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q1/b/Workspace.jpg}%
+		\caption{Part b Workspace}
+		\label{fig:}
+	\end{figure}
+	\par The final workspace of the 5x5 Adaptive Threshold show the
+	dimensions of the output image, which are the same as the input
+	greyscale image, and of type ``double''.
+	\par The 5x5 adaptive threshold, thresholding each pixel based on the
+	average of the surrounding 5x5 region, provides adequate segmentation of
+	the background and foreground. It also deals with issues such as uneven
+	lighting conditions, glasses and reflections, and facial hair, with a
+	better accuracy than the global threshold. The resulting image has
+	better segmentation of the facial features, and better separation of the
+	foreground and background.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q1/c/Workspace.jpg}%
+		\caption{Part c Workspace}
+		\label{fig:}
+	\end{figure}
+	\par The final workspace of part d shows the resulting dimensions of
+	both the adaptive and global threshold functions, as applied to the
+	noisy input greyscale image.
+	\par From the results section above, it is clear that the global
+	threshold technique is less sensitive to noise. As there is no weight
+	placed on the pixel intensity values within the image, there is less
+	variance to the thresholding with the amount of noise found in the image.
+	\par As the adaptive thresholding relies strongly on the intensity
+	values in the pixels surrounding the pixel in question, noise can have a
+	greater effect on the thresholding.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q1/d/Workspace.jpg}%
+		\caption{Part d Workspace}
+		\label{fig:}
+	\end{figure}
+	The code utilised in the completion of this section can be found in the
+	Appendices.
 	\section{Part 2: Segmentation}
 	\subsection{Introduction}
 	Segmentation is the practice of extracting features from an image. In
@@ -266,6 +342,8 @@
 	to remove only blobs under a size specified by the largest letter
 	(blob).
 	\subsection{Techniques}
+	In completing this section of the assignment, the following techniques
+	are utilised:
 	\subsubsection{Part a}
 	\underline{\textbf{Low Pass Filter}}
 	\par The VSG ``LowPass'' filter function applies a 3x3 low pass filter
@@ -303,7 +381,7 @@
 	white pixel only if the pixel is white in exactly one of the two input
 	images.
 	\par\underline{\textbf{Count Blobs}}
-	The ``CountBlobs'' function of the VSG toolbox counts the number of
+	\par The ``CountBlobs'' function of the VSG toolbox counts the number of
 	white blobs in the input image, outputting its value as an integer.
 	\par\underline{\textbf{Canny}}
 	\par The VSG ``Canny'' edge detection function returns the image with
@@ -448,10 +526,97 @@
 	assertion within the unit test checks each test licence plate image
 	against it's expected resulting number of characters.
 	\subsubsection{Part b}
+	In order to test that the robustness of this code, a unit test file
+	(q2pbtest.m) is executed. An assertion within the unit test checks the
+	licence plate image against it's expected resulting number of
+	characters, while passing a variance value to the ``imnoise'' function.
+	\par The point at which the solution fails is with a variance value of
+	6. At this point, enough noise is added that the border blob which is
+	extracted is split, leaving a blob which is then mistakenly extracted as
+	a character in the registration. As such, the unit test fails, with an
+	output value of (in the below case) 8 not matching the correct value of
+	7.
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Zero Noise Overlay}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate1/qanumber_plate_1Overlay.jpg}}%
+		\subcaptionbox{Noise (with Variance 6) Overlay}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/noiseVar6Overlay.jpg}}%
+		\caption{Overlayed Characters}
+		\label{fig:}
+	\end{figure}
 	\subsection{Conclusion}
+	The final workspace shows the input image format, dimensions $328 \times
+	1393 \time 3$. This RGB image is converted to greyscale, removing the
+	three channels for the colourspace.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q2/NumPlate6/Workspace.jpg}%
+		\caption{Part a Workspace}
+		\label{fig:}
+	\end{figure}
+	\par There are a number of intermediate values, of the same dimensions
+	as the input image, used for the intermediate processing steps required
+	in extracting the registration characters.
+	\par These intermediate steps include the low pass filtering,
+	thresholding, inversion, and biggest blob removal. The looping of
+	biggest blob removal, and addition to the output image is also stored in
+	one of these intermediate values.
+	\par The chosen solution of looping through the biggest blobs until a
+	certain ratio is reached allows for the robustness of this solution. An
+	initial tested solution used the smallest blob in order to extract the
+	characters, however, adding noise to the image increases the time taken
+	to complete the task beyond the point of being useable.
+	\par The code utilised in the completion of this section, along with the
+	output images from each example, can be found within the Appendices.
 	\section{Part 3: Convolution}
 	\subsection{Introduction}
+	Convolution is a common practice for pattern matching between an input
+	image and a template image. In this section, a patterned input image,
+	consisting of approximately 28 occurrences (full or partial) of the
+	given template image, must have the number of full occurrences
+	calculated.
+	\par Greyscale convolution between the input image and the template must
+	return the number of fully visible pattern matches (i.e. matches with
+	features not in contact with the borders), in a way which us both
+	robust, and data drive. By using dilation, the features touching the
+	border can be removed, and the following features can be highlighted
+	using a combination of centroid, point to square, and overlaying
+	techniques.
 	\subsection{Techniques}
+	In completing this section of the assignment, the following techniques
+	are utilised:
+	\subsubsection{Part a}
+	\underline{\textbf{Convolution}}
+	\par Convolution is a template matching technique. A template mask is
+	compared across an input image. A strong match between the template
+	image and the input image is represented by a greater intensity value.
+	The VSG ``Convolution'' function takes an input image and template, and
+	returns an image, of type double, with the same dimensions as the input
+	image.
+	\par\underline{\textbf{Rotate}}
+	\par Rotation is required both for testing the robustness of a solution, and
+	for better template matching with respect to convolution. The VSG
+	``RotateImg'' function rotates an input image by an input angle.
+	\par\underline{\textbf{Centroid}}
+	\par The centroid of an object is its center of gravity. This can be used
+	within image processing for labelling purposes. The VSG ``Centroid''
+	function places a single white pixel at the ``center of gravity'' of the
+	white blobs within the image. The output of this function is an image of
+	the same dimensions as the input image, with single white pixels (of
+	value 255), surrounded by black pixels (of value 0).
+	\par\underline{\textbf{Point to Square}}
+	\par In order to more easily represent a functions output, points can be
+	converted to larger, more visible features. The VSG ``Point2Square''
+	function places a 5x5 square surrounding any single pixels of intensity
+	value 255.
+	\subsubsection{Part b}
+	\underline{\textbf{Reconstruction By Dilation}}
+	\par Reconstruction by dilation is a technique which can be used to
+	detect features in contact with the image border. Passing the input
+	image into the VSG ``ReconByDil'' function, along with the border pixels
+	of the image, the features in contact with the border can be
+	reconstructed, and subsequently removed from the image.
 	\subsection{Pseudocode}
 	\subsubsection{Part a}
 	\begin{enumerate}
@@ -487,7 +652,7 @@
 	\begin{enumerate}
 		\item Repeat the steps described in Part a.
 		\item After the input image has been converted to greyscale, use
-			the ``MaskImg'' function to cover any parts of the image
+			the ``ReconByDil'' function to remove any parts of the image
 			in contact with the edge.
 		\item After the ``Centroid'' function is executed, add a call to
 			the ``WPCounter'' function, to count the white pixels,
@@ -504,6 +669,9 @@
 	\end{enumerate}
 	\subsection{Results}
 	\subsubsection{Part a}
+	In part a, the greyscale convolution is executed correctly, resulting in
+	the highlighting of the matching patterns within the image. The input
+	image is first correctly loaded into Matlab, and converted to greyscale.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Input Image}
@@ -513,6 +681,9 @@
 		\caption{Input image and Greyscale Conversion}
 		\label{fig:}
 	\end{figure}
+	\par The template image is then loaded into Matlab, and is also
+	converted to greyscale. In order to make the pattern matching more
+	robust, a copy of the greyscale input is stored.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Template Image}
@@ -524,6 +695,10 @@
 		\caption{Required Template for Convolution}
 		\label{fig:}
 	\end{figure}
+	\par The convolution function is applied to the input image with both
+	the template, and rotated template images. The highlighted regions
+	within the image is returned from the convolution function, and the two
+	outputs are combined using the VSG ``Add'' function.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Convolution (OT)}
@@ -536,6 +711,11 @@
 		Template(RT), Added Results(+)}
 		\label{fig:}
 	\end{figure}
+	\par A data driven threshold, much like that used in section 1 is
+	applied to the convolution output. This results in a number of blobs, of
+	intensity value 255, which can then be converted to points using the
+	``Centroid'' function. These points can be represented as squares for
+	visualization purposes, using the ``Point2Square'' function.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Threshold}
@@ -549,12 +729,16 @@
 	matches}
 		\label{fig:}
 	\end{figure}
+	\par The squares representing the positions of pattern matches can be
+	overlayed on the original image, using the VSG ``Add'' function.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[height=5cm]{Results/Q3/a/qaOverlay.jpg}%
 		\caption{Overlay showing Location of Pattern Matches}
 		\label{fig:}
 	\end{figure}
+	\par In order to investigate the effects of rotating the input image,
+	the greyscale input image is rotated by 30, 45, and 60 degrees.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Input $30^\circ$}
@@ -566,6 +750,8 @@
 		\caption{Input Image Rotated $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	Applying convolution with the two template images results in the
+	following images.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Convolution1 $30^\circ$}
@@ -588,6 +774,8 @@
 		\caption{Convolution with Rotated Template: $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	\par Adding the results of the convolutions results in the following
+	images.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Added Convolution $30^\circ$}
@@ -599,6 +787,8 @@
 		\caption{Added Convolution Results: $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	\par Thresholding each of the convolution outputs returns a number of
+	blobs, as in the original image, rotated by the input angle.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Threshold $30^\circ$}
@@ -610,6 +800,9 @@
 		\caption{Threshold: $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	\par The centroid of each blob in the resulting threshold image is shown
+	below, with a single white pixel of intensity 255 representing the
+	``center of gravity'' of the blob.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Centroid $30^\circ$}
@@ -621,6 +814,8 @@
 		\caption{Centroid: $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	\par As before, the ``Point2Square'' function is used for visualisation
+	purposes.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Point2Square $30^\circ$}
@@ -632,6 +827,8 @@
 		\caption{Point2Square: $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	\par The overlay images show the offset between the original input
+	image (not rotated), and the template matches (rotated).
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Overlay $30^\circ$}
@@ -643,6 +840,15 @@
 		\caption{Overlay: $30^\circ, 45^\circ$ \& $60^\circ$}
 		\label{fig:}
 	\end{figure}
+	\par In order to evaluate the effects of varying the threshold value on
+	the template matching, threshold functions of different values are
+	applied to the convolution output. As can be seen, a lower threshold
+	value of 32 results in a single blob, which would return a single
+	centroid point and match.
+	\par A threshold value of 50 results in a number of smaller unconnected
+	blobs, which can give incorrect output values.
+	\par A threshold value of 60 results in fewer blobs, therefore giving
+	fewer centroids, and, again, incorrect output values.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Threshold Value 32}
@@ -655,6 +861,11 @@
 		\label{fig:}
 	\end{figure}
 	\subsubsection{Part b}
+	\par In part b, the edge connected features are removed from the image
+	using the VSG ``ReconByDil'' function, which, when given an input of the
+	original images border pixels can ``regrow'' the connected features.
+	These features can then be removed from the input image.
+	\par The resulting image can then be processed as in part a.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Dilated Image}
@@ -678,7 +889,13 @@
 		\caption{Overlay of Template Match on Original Input Image}
 		\label{fig:}
 	\end{figure}
+	\par As visible in the above overlay image, the correct count of 18
+	pattern matches is achieved.
 	\subsubsection{Part c}
+	\par Part c investigates the robustness of the chosen solution.
+	Incrementing the noise variance shows that the incorrect pattern match
+	count is achieved at a variance of 0.1, while the solution can deal with
+	noise up to an approximate variance of 0.01.
 	\begin{figure}[H]
 		\centering
 		\subcaptionbox{Noise Variance at 0.01}
@@ -690,6 +907,50 @@
 		\label{fig:}
 	\end{figure}
 	\subsection{Conclusion}
+	The final workspace of part a shows the dimensions of the input RGB
+	image ($406 \times 461 \times 3$), the input RGB mask ($60 \times 57
+	\times 3$), and any intermediate values.
+	 \par The greyscale input and mask images have the same dimensions as
+	 the input images, however they do not have the channels for the
+	 colourspace.
+	 \par The final output image has all pattern matches, which includes
+	 some incorrect matches due to the edge connected features, stored in an
+	 RGB space, where the intensities of the squares used to represent the
+	 pattern matches are added to the red channel of the original input
+	 image.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q3/a/Workspace.jpg}%
+		\caption{Part a Workspace}
+		\label{fig:}
+	\end{figure}
+	\par The final workspace of part b shows the same values as in part a,
+	alongside the ``numPatterns'' value, output from the ``WPCounter''
+	function. This function counts the number of white pixels following the
+	``Centroid'' function, which corresponds to the number of pattern
+	matches in the image.
+	\par As is required in the specification, there are 18 pattern matches
+	found in the image.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q3/b/Workspace.jpg}%
+		\caption{Part b Workspace}
+		\label{fig:}
+	\end{figure}
+	The final workspace of part c shows the same values as in part b, with
+	the newly completed dilation function output, and an incorrect output
+	value for the number of pattern matches.
+	\par As the noise applied to the input image is increased, the dilation
+	begins to encroach further into the image than it should, affecting the
+	pattern matches from the convolution function, which in turn affects the
+	thresholding function. As such, adding noise to the image evetually results
+	in an incorrect number of pattern matches.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=5cm]{Results/Q3/c/Workspace.jpg}%
+		\caption{Part c Workspace}
+		\label{fig:}
+	\end{figure}
 	\section{Appendix}
 	\subsection{Part 1:}
 	\subsubsection{Code:}
@@ -1126,6 +1387,349 @@ i = 6;
 assert(p2qb('data/number_plate_1.jpg', i)==7, 'Error in Output')
 \end{lstlisting}
 	\subsubsection{Images:}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2.jpg}}%
+		\subcaptionbox{Greyscale Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Grey.jpg}}%
+		\subcaptionbox{Low Pass Filtered}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Low.jpg}}%
+		\caption{Initial Segmentation Setup}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Mid Threshold}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2Mid.jpg}}%
+		\subcaptionbox{Inverted (Not)}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2Not.jpg}}%
+		\caption{Preparing for Border Removal}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Biggest Blob}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2Border.jpg}}%
+		\subcaptionbox{Biggest Blob Removed}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2NoBorder.jpg}}%
+		\caption{Removed Outer Border}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Largest Character}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2BigChar.jpg}}%
+		\subcaptionbox{Remaining Characters}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2Remain.jpg}}%
+		\caption{Removed Largest Alphanumeric Character}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 1 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Added1.jpg}}%
+		\subcaptionbox{Loop 2 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Added2.jpg}}%
+		\subcaptionbox{Loop 3 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Added3.jpg}}%
+		\caption{Characters Extracted from Loops 1-3}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 4 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Added4.jpg}}%
+		\subcaptionbox{Loop 5 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Added5.jpg}}%
+		\subcaptionbox{Loop 6 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate2/qanumber_plate_2Added6.jpg}}%
+		\caption{Characters Extracted from Loops 4-6}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Canny Edge Detection}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2Canny.jpg}}%
+		\subcaptionbox{Overlayed Images}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate2/qanumber_plate_2Overlay.jpg}}%
+		\caption{Overlayed Extracted Characters}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3.jpg}}%
+		\subcaptionbox{Greyscale Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Grey.jpg}}%
+		\subcaptionbox{Low Pass Filtered}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Low.jpg}}%
+		\caption{Initial Segmentation Setup}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Mid Threshold}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3Mid.jpg}}%
+		\subcaptionbox{Inverted (Not)}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3Not.jpg}}%
+		\caption{Preparing for Border Removal}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Biggest Blob}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3Border.jpg}}%
+		\subcaptionbox{Biggest Blob Removed}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3NoBorder.jpg}}%
+		\caption{Removed Outer Border}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Largest Character}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3BigChar.jpg}}%
+		\subcaptionbox{Remaining Characters}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3Remain.jpg}}%
+		\caption{Removed Largest Alphanumeric Character}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 1 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Added1.jpg}}%
+		\subcaptionbox{Loop 2 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Added2.jpg}}%
+		\subcaptionbox{Loop 3 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Added3.jpg}}%
+		\caption{Characters Extracted from Loops 1-3}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 4 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Added4.jpg}}%
+		\subcaptionbox{Loop 5 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate3/qanumber_plate_3Added5.jpg}}%
+		\caption{Characters Extracted from Loops 4-5}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Canny Edge Detection}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3Canny.jpg}}%
+		\subcaptionbox{Overlayed Images}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate3/qanumber_plate_3Overlay.jpg}}%
+		\caption{Overlayed Extracted Characters}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4.jpg}}%
+		\subcaptionbox{Greyscale Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Grey.jpg}}%
+		\subcaptionbox{Low Pass Filtered}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Low.jpg}}%
+		\caption{Initial Segmentation Setup}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Mid Threshold}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4Mid.jpg}}%
+		\subcaptionbox{Inverted (Not)}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4Not.jpg}}%
+		\caption{Preparing for Border Removal}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Biggest Blob}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4Border.jpg}}%
+		\subcaptionbox{Biggest Blob Removed}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4NoBorder.jpg}}%
+		\caption{Removed Outer Border}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Largest Character}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4BigChar.jpg}}%
+		\subcaptionbox{Remaining Characters}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4Remain.jpg}}%
+		\caption{Removed Largest Alphanumeric Character}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 1 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Added1.jpg}}%
+		\subcaptionbox{Loop 2 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Added2.jpg}}%
+		\subcaptionbox{Loop 3 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Added3.jpg}}%
+		\caption{Characters Extracted from Loops 1-3}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 4 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Added4.jpg}}%
+		\subcaptionbox{Loop 5 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Added5.jpg}}%
+		\subcaptionbox{Loop 6 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate4/qanumber_plate_4Added6.jpg}}%
+		\caption{Characters Extracted from Loops 4-6}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Canny Edge Detection}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4Canny.jpg}}%
+		\subcaptionbox{Overlayed Images}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate4/qanumber_plate_4Overlay.jpg}}%
+		\caption{Overlayed Extracted Characters}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5.jpg}}%
+		\subcaptionbox{Greyscale Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Grey.jpg}}%
+		\subcaptionbox{Low Pass Filtered}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Low.jpg}}%
+		\caption{Initial Segmentation Setup}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Mid Threshold}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5Mid.jpg}}%
+		\subcaptionbox{Inverted (Not)}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5Not.jpg}}%
+		\caption{Preparing for Border Removal}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Biggest Blob}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5Border.jpg}}%
+		\subcaptionbox{Biggest Blob Removed}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5NoBorder.jpg}}%
+		\caption{Removed Outer Border}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Largest Character}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5BigChar.jpg}}%
+		\subcaptionbox{Remaining Characters}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5Remain.jpg}}%
+		\caption{Removed Largest Alphanumeric Character}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 1 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Added1.jpg}}%
+		\subcaptionbox{Loop 2 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Added2.jpg}}%
+		\subcaptionbox{Loop 3 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Added3.jpg}}%
+		\caption{Characters Extracted from Loops 1-3}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 4 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Added4.jpg}}%
+		\subcaptionbox{Loop 5 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Added5.jpg}}%
+		\subcaptionbox{Loop 6 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate5/qanumber_plate_5Added6.jpg}}%
+		\caption{Characters Extracted from Loops 4-6}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Canny Edge Detection}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5Canny.jpg}}%
+		\subcaptionbox{Overlayed Images}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate5/qanumber_plate_5Overlay.jpg}}%
+		\caption{Overlayed Extracted Characters}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Input Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6.jpg}}%
+		\subcaptionbox{Greyscale Image}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Grey.jpg}}%
+		\subcaptionbox{Low Pass Filtered}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Low.jpg}}%
+		\caption{Initial Segmentation Setup}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Mid Threshold}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6Mid.jpg}}%
+		\subcaptionbox{Inverted (Not)}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6Not.jpg}}%
+		\caption{Preparing for Border Removal}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Biggest Blob}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6Border.jpg}}%
+		\subcaptionbox{Biggest Blob Removed}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6NoBorder.jpg}}%
+		\caption{Removed Outer Border}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Largest Character}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6BigChar.jpg}}%
+		\subcaptionbox{Remaining Characters}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6Remain.jpg}}%
+		\caption{Removed Largest Alphanumeric Character}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 1 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Added1.jpg}}%
+		\subcaptionbox{Loop 2 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Added2.jpg}}%
+		\subcaptionbox{Loop 3 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Added3.jpg}}%
+		\caption{Characters Extracted from Loops 1-3}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Loop 4 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Added4.jpg}}%
+		\subcaptionbox{Loop 5 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Added5.jpg}}%
+		\subcaptionbox{Loop 6 Result}
+		[.3\linewidth]{\includegraphics[height=1cm]{Results/Q2/NumPlate6/qanumber_plate_6Added6.jpg}}%
+		\caption{Characters Extracted from Loops 4-6}
+		\label{fig:}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\subcaptionbox{Canny Edge Detection}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6Canny.jpg}}%
+		\subcaptionbox{Overlayed Images}
+		[.5\linewidth]{\includegraphics[height=1.5cm]{Results/Q2/NumPlate6/qanumber_plate_6Overlay.jpg}}%
+		\caption{Overlayed Extracted Characters}
+		\label{fig:}
+	\end{figure}
 	\subsection{Part 3:}
 	\subsubsection{Code:}
 \begin{lstlisting}[caption={Part 3 a}]
@@ -1419,5 +2023,4 @@ end
 pause;
 close all force;
 \end{lstlisting}
-	\subsubsection{Images:}
 \end{document}
